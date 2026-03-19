@@ -21,7 +21,7 @@
   <nav class="bottom-nav">
     {{nav}}
   </nav>
-  <div id="lightbox" onclick="this.style.display='none'">
+  <div id="lightbox" onclick="this.style.display='none';document.body.classList.remove('lightbox-open')">
     <div id="lightbox-frame">
       <img id="lightbox-img" src="" alt="">
     </div>
@@ -29,6 +29,7 @@
   <script>
     const lbImg = document.getElementById('lightbox-img');
     const lb = document.getElementById('lightbox');
+    lb.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
     const PAD = 32;
 
     document.querySelectorAll('.card img').forEach(img => {
@@ -44,6 +45,7 @@
           lbImg.style.width = (tmp.naturalWidth * scale) + 'px';
           lbImg.style.height = (tmp.naturalHeight * scale) + 'px';
           lbImg.src = img.src;
+          document.body.classList.add('lightbox-open');
           lb.style.display = 'flex';
         };
         tmp.src = img.src;

@@ -126,18 +126,22 @@ main {
   margin-top: 8px;
 }
 
+body.lightbox-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
 #lightbox {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.85);
   justify-content: center;
   align-items: center;
   cursor: pointer;
   z-index: 100;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 #lightbox-frame {
