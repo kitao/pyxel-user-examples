@@ -64,7 +64,7 @@ def render_entry(entry, root):
 
 
 def page_range_label(entries):
-    """Return label like '171-152' for a page's entries."""
+    """Return label like '171-154' for a page's entries."""
     return f"{entries[0]['id']}-{entries[-1]['id']}"
 
 

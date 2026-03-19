@@ -35,7 +35,7 @@
       img.style.cursor = 'pointer';
       img.addEventListener('click', e => {
         e.preventDefault();
-        // Load image to get natural size, then compute integer scale
+        // Scale image to fit viewport while keeping pixel art sharp
         const tmp = new Image();
         tmp.onload = () => {
           const maxW = window.innerWidth * 0.85 - PAD * 2;
