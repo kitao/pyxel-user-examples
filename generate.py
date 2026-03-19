@@ -130,7 +130,7 @@ def generate():
 
         entries_html = "\n".join(render_entry(e, root) for e in page_entries)
         nav = build_nav(pages, i, root)
-        title = f"Pyxel User Examples ({label})"
+        title = "Pyxel User Examples"
 
         html = template
         html = html.replace("{{title}}", title)
