@@ -1,6 +1,6 @@
 # Pyxel User Examples
 
-A gallery of games and tools created with [Pyxel](https://github.com/kitao/pyxel), a retro game engine for Python.
+Works made with [Pyxel](https://github.com/kitao/pyxel), a retro game engine for Python.
 
 ## Site
 
@@ -13,10 +13,17 @@ Published via GitHub Pages: https://kitao.github.io/pyxel-user-examples/
 3. Run the generator:
 
 ```bash
-python generate.py
+.venv/bin/python generate.py
 ```
 
 4. Commit and push
+
+## Setup
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install pyyaml
+```
 
 ## Files
 
@@ -26,11 +33,10 @@ python generate.py
 | `page.html` | HTML template |
 | `styles.css` | Stylesheet |
 | `generate.py` | Builds `index.html` and `pages/*.html` from the template and data |
-| `download_images.py` | Downloads images from the original JSON data |
 | `index.html` | Generated – latest entries page |
 | `pages/` | Generated – older entries pages |
 | `images/` | Screenshot GIFs |
 
 ## Submit your project
 
-Open an issue at [kitao/pyxel#671](https://github.com/kitao/pyxel/issues/671).
+Please share yours [here](https://github.com/kitao/pyxel/issues/671)!

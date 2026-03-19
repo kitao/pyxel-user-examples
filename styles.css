@@ -126,13 +126,6 @@ main {
   margin-top: 8px;
 }
 
-footer {
-  text-align: center;
-  padding: 16px 0;
-  font-size: 0.8rem;
-  color: #8b949e;
-}
-
 #lightbox {
   display: none;
   position: fixed;

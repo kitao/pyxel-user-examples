@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Generate static HTML pages from examples.yml and page.html template."""
-import math
 import os
 import shutil
 
