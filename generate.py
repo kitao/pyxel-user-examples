@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""Generate static HTML pages from examples.yml and page.html template."""
+import math
+import os
+import shutil
+
+import yaml
+
+ITEMS_PER_PAGE = 18
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+PAGES_DIR = os.path.join(ROOT_DIR, "pages")
+
+
+def load_entries():
+    with open(os.path.join(ROOT_DIR, "examples.yml")) as f:
+        return yaml.safe_load(f)
+
+
+def load_template():
+    with open(os.path.join(ROOT_DIR, "page.html")) as f:
+        return f.read()
+
+
+def esc(s):
+    """Escape HTML special characters."""
+    return (
+        str(s)
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
+
+
+def render_entry(entry, root):
+    eid = entry["id"]
+    title = esc(entry["title"])
+    desc = esc(entry.get("desc", ""))
+    author = esc(entry["author"])
+    site = entry.get("site", "")
+    contact = entry.get("contact", "")
+
+    # Title link
+    if site:
+        title_html = f'<a href="{esc(site)}" target="_blank" rel="noopener">#{eid} {title}</a>'
+    else:
+        title_html = f"#{eid} {title}"
+
+    # Author link
+    if contact:
+        author_html = f'<a href="{esc(contact)}" target="_blank" rel="noopener">{author}</a>'
+    else:
+        author_html = author
+
+    img_src = f"{root}images/{eid}.gif"
+
+    return f"""<div class="card">
+  <img src="{img_src}" alt="{title}" loading="lazy">
+  <div class="card-body">
+    <h2>{title_html}</h2>
+    <div class="meta">by {author_html}</div>
+    <div class="desc">{desc}</div>
+  </div>
+</div>"""
+
+
+def page_range_label(entries):
+    """Return label like '171-152' for a page's entries."""
+    return f"{entries[0]['id']}-{entries[-1]['id']}"
+
+
+def page_href(pages, idx, root):
+    """Return href for a given page index."""
+    if idx == 0:
+        return f"{root}index.html"
+    return f"{root}pages/{page_range_label(pages[idx])}.html"
+
+
+def build_nav(pages, current_idx, root):
+    """Build navigation HTML."""
+    parts = []
+
+    # Prev arrow
+    if current_idx > 0:
+        parts.append(f'<a href="{page_href(pages, current_idx - 1, root)}" class="nav-arrow">\u25c0</a>')
+    else:
+        parts.append('<span class="nav-arrow disabled">\u25c0</span>')
+
+    for i, page_entries in enumerate(pages):
+        label = page_range_label(page_entries)
+        if i == current_idx:
+            parts.append(f"<span>{label}</span>")
+        else:
+            parts.append(f'<a href="{page_href(pages, i, root)}">{label}</a>')
+
+    # Next arrow
+    if current_idx < len(pages) - 1:
+        parts.append(f'<a href="{page_href(pages, current_idx + 1, root)}" class="nav-arrow">\u25b6</a>')
+    else:
+        parts.append('<span class="nav-arrow disabled">\u25b6</span>')
+
+    return "\n    ".join(parts)
+
+
+def generate():
+    entries = load_entries()
+    template = load_template()
+
+    # Split into pages
+    pages = []
+    for i in range(0, len(entries), ITEMS_PER_PAGE):
+        pages.append(entries[i : i + ITEMS_PER_PAGE])
+
+    # Clean and create pages directory
+    if os.path.exists(PAGES_DIR):
+        shutil.rmtree(PAGES_DIR)
+    os.makedirs(PAGES_DIR)
+
+    for i, page_entries in enumerate(pages):
+        label = page_range_label(page_entries)
+
+        if i == 0:
+            filepath = os.path.join(ROOT_DIR, "index.html")
+            root = ""
+            css_path = "styles.css"
+        else:
+            filepath = os.path.join(PAGES_DIR, f"{label}.html")
+            root = "../"
+            css_path = "../styles.css"
+
+        entries_html = "\n".join(render_entry(e, root) for e in page_entries)
+        nav = build_nav(pages, i, root)
+        title = f"Pyxel User Examples ({label})"
+
+        html = template
+        html = html.replace("{{title}}", title)
+        html = html.replace("{{css_path}}", css_path)
+        html = html.replace("{{root}}", root)
+        html = html.replace("{{nav}}", nav)
+        html = html.replace("{{entries}}", entries_html)
+
+        with open(filepath, "w") as f:
+            f.write(html)
+        print(f"  {filepath}")
+
+    print(f"\nGenerated {len(pages)} pages from {len(entries)} entries")
+
+
+if __name__ == "__main__":
+    generate()

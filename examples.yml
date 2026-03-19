@@ -1,0 +1,1167 @@
+- id: 171
+  title: Pyxel Pacman
+  site: https://sanbunnoichi1962.web.fc2.com/pyxel/pyxelpac.html
+  author: sanbunnoichi
+  contact: mailto:sanbunnoichi1962@gmail.com
+  desc: Pacman like game
+
+- id: 170
+  title: Falling Sand
+  site: https://github.com/5h00T/FallingSand/
+  author: shoot.er
+  contact: https://x.com/m4_sd
+  desc: Simple falling sand simulation
+
+- id: 169
+  title: THE COLORS
+  site: https://github.com/Python-yarouze/the-colors
+  author: FulLine
+  contact: https://x.com/ful_line
+  desc: A color-changing puzzle action game
+
+- id: 168
+  title: Cursed Caverns
+  site: https://kitao.github.io/pyxel/web/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.cursed_caverns&gamepad=enabled
+  author: Takashi Kitao
+  contact: https://x.com/kitao
+  desc: A platformer from the Pyxel Official Book
+
+- id: 167
+  title: Mega Wing
+  site: https://kitao.github.io/pyxel/web/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.mega_wing&gamepad=enabled
+  author: Takashi Kitao
+  contact: https://x.com/kitao
+  desc: A shoot-em-up from the Pyxel Official Book
+
+- id: 166
+  title: Space Rescue
+  site: https://kitao.github.io/pyxel/web/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.space_rescue&gamepad=enabled
+  author: Takashi Kitao
+  contact: https://x.com/kitao
+  desc: A one-button rescue game from the Pyxel Official Book
+
+- id: 165
+  title: Mini Metroid
+  site: https://aged99oow.github.io/metroid/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A reduced version of NES Metroid
+
+- id: 164
+  title: Lama
+  site: https://aged99oow.github.io/lama/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A shedding game where you shed or fold for minimum points
+
+- id: 163
+  title: Gekka no jin (Moonlit Formation)
+  site: https://kogakure-saizo.itch.io/moonlit-formation
+  author: saizo
+  contact: https://x.com/Saizo_KOGAKURE
+  desc: A new Hanafuda experience in retro pixel art
+
+- id: 162
+  title: Old ARPG like
+  site: https://github.com/ronegray/OldARPGlike/tree/main
+  author: MoQ
+  contact: https://github.com/ronegray
+  desc: An old-school action RPG (PC-88 era-inspired)
+
+- id: 161
+  title: Pyxel Fighter jet Game
+  site: https://github.com/life-is-plastic/pyxel-fighter-jet-game
+  author: life-is-plastic
+  contact: https://github.com/life-is-plastic
+  desc: A top-down flying-and-shooting game
+
+- id: 160
+  title: "Looking for Kiara-chan!"
+  site: https://game.kiasaga.love/
+  author: Kikutaro
+  contact: https://x.com/kikutaro_
+  desc: A mystery-solving mini-RPG
+
+- id: 159
+  title: Game of Pyxels
+  site: https://leo-imbert.itch.io/game-of-pyxels
+  author: Léo Imbert
+  contact: https://github.com/LeoI52
+  desc: A retro-style remake of Conway’s Game of Life
+
+- id: 158
+  title: "Queue It !"
+  site: https://leo-imbert.itch.io/queue-it
+  author: Léo Imbert
+  contact: https://github.com/LeoI52
+  desc: A fast-paced puzzle-platformer
+
+- id: 157
+  title: PyxelTD
+  site: https://github.com/5h00T/PyxelTD
+  author: shoot.er
+  contact: https://x.com/m4_sd
+  desc: A simple tower defense game
+
+- id: 156
+  title: Loop Shot
+  site: https://leo-imbert.itch.io/loop-shot
+  author: Léo Imbert
+  contact: https://github.com/LeoI52
+  desc: A top-down shooter about a looping arena
+
+- id: 155
+  title: Hanafuda Pon
+  site: https://github.com/ninja-cop/RetroGames/tree/main/hanafudaPon
+  author: saizo
+  contact: https://github.com/ninja-cop
+  desc: A game of clearing sets of three matching Hanafuda cards
+
+- id: 154
+  title: Towercraft
+  site: https://codeberg.org/son_link/Towercraft
+  author: Son Link
+  contact: https://x.com/sonlink
+  desc: A game to build the tallest tower by stacking floors
+
+- id: 153
+  title: Old JRPG like
+  site: https://moq.dojin.com/pyxelgames.html
+  author: MoQ(もっQ)
+  contact: https://x.com/ronegray
+  desc: A game like an RPG from the early NES era
+
+- id: 152
+  title: Hanafuda Tetris
+  site: https://github.com/ninja-cop/RetroGames/tree/main/hanafudaTetris
+  author: saizo
+  contact: https://github.com/ninja-cop
+  desc: A game where you match three Hanafuda cards of the same month
+
+- id: 151
+  title: "FAKE DOGMENTARY \"Q\""
+  site: https://hotatecurry.github.io/fakedogmentaryq/fakedog.html
+  author: hotate_curry
+  contact: https://x.com/hotate__curry
+  desc: A Souls-like animal welfare action game
+
+- id: 150
+  title: Breakout
+  site: https://github.com/jay-kumogata/PyxelChip8/tree/main/pyxel/breakout
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A Breakout-style game originally made for CHIP-8
+
+- id: 149
+  title: Graffiti Cleanup Rush
+  site: https://github.com/LeoI52/graffiti-cleanup-rush
+  author: Léo Imbert
+  contact: https://github.com/LeoI52
+  desc: A score-based arcade clicking game
+
+- id: 148
+  title: Mastermind
+  site: https://github.com/jay-kumogata/PyxelChip8/tree/main/pyxel/mastermind
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A number-guessing game using hints
+
+- id: 147
+  title: popstar
+  site: https://github.com/c-hui/popstar
+  author: shichunhui
+  contact: mailto:mrshich@foxmail.com
+  desc: A SameGame-style puzzle game
+
+- id: 146
+  title: Pyxel Mandelbrot
+  site: https://github.com/gomatama5/Pyxel_Mandelbrot
+  author: gomatama5
+  contact: https://github.com/gomatama5
+  desc: A Mandelbrot set drawing tool
+
+- id: 145
+  title: Jump Jump Bouncing Ball
+  site: https://github.com/gomatama5/Jump_Jump_Bouncing_Ball
+  author: gomatama5
+  contact: https://github.com/gomatama5
+  desc: A jumping action game with a physics engine
+
+- id: 144
+  title: Number Link
+  site: https://github.com/ku-ron/pyxel_minigames/blob/main/main/numberlink/readme.md
+  author: ku-ron
+  contact: https://github.com/ku-ron
+  desc: A puzzle game about connecting matching numbers with a line
+
+- id: 143
+  title: "Gem'X Pyxel Clone"
+  site: https://sanbunnoichi1962.web.fc2.com/pyxel_contents.html#gemx
+  author: sanbunnoichi
+  contact: mailto:sanbunnoichi1962@gmail.com
+  desc: An Amiga puzzle game clone
+
+- id: 142
+  title: "L'Épopée Pixellisée"
+  site: https://www.pyxelstudio.net/cf2apb4z
+  author: Lamorkitu93
+  contact: https://github.com/Lamorkitu93
+  desc: A platformer
+
+- id: 141
+  title: Stalker Bar
+  site: https://sitf.itch.io/stalkerbar
+  author: s1tf
+  contact: https://github.com/s1tf
+  desc: An adventure game
+
+- id: 140
+  title: Mahjong Solitaire
+  site: https://github.com/BouKiCHi/mahjong
+  author: BouKiCHi
+  contact: https://x.com/boukichi_numloc
+  desc: A simple Mahjong solitaire game
+
+- id: 139
+  title: Asteroids
+  site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/asteroids
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A multidirectional shooter
+
+- id: 138
+  title: "Seagull's Fishing"
+  site: https://stone-dot.itch.io/seagulls-fishing
+  author: こいし
+  contact: https://x.com/koishi_dot
+  desc: An easy 60-second score-attack game
+
+- id: 137
+  title: Typing Practice
+  site: https://github.com/samurai-apps/pyxel-games/blob/main/src/91_typing_practice.py
+  author: SamuraiApps
+  contact: https://x.com/samuraiapps
+  desc: A typing practice game using words from Python and Pyxel
+
+- id: 136
+  title: Laser Jetman
+  site: https://github.com/helpcomputer/laser-jetman
+  author: Adam
+  contact: https://x.com/badcomputer0
+  desc: An arcade shoot-em-up
+
+- id: 135
+  title: Rocket Flight
+  site: https://github.com/nadi726/Rocket-Flight
+  author: nadi726
+  contact: https://github.com/nadi726
+  desc: A side-scrolling endless runner
+
+- id: 134
+  title: EntroPipes
+  site: https://codeberg.org/son_link/EntroPipes
+  author: Son Link
+  contact: https://x.com/sonlink
+  desc: A puzzle game about rotating and connecting all pipes
+
+- id: 133
+  title: Tapping Freecell
+  site: https://tiquer17.github.io/pyxel/freecell/
+  author: tiquer17
+  contact: https://github.com/tiquer17
+  desc: A FreeCell game with touch controls
+
+- id: 132
+  title: AutoRace
+  site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/autorace
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: An early car racing game
+
+- id: 131
+  title: HadeGame
+  site: https://github.com/hnsol/pyxel-hadegame/
+  author: hann-solo
+  contact: https://x.com/_hnsol
+  desc: A first-person 3D maze escape game
+
+- id: 130
+  title: 3D Maze
+  site: https://github.com/Sanzentyo/3D_Maze
+  author: Sanzentyo
+  contact: https://github.com/Sanzentyo
+  desc: A first-person 3D maze escape game
+
+- id: 129
+  title: PyxelChip8
+  site: https://github.com/jay-kumogata/PyxelChip8
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A CHIP-8 emulator
+
+- id: 128
+  title: pymunk_de_smartball
+  site: https://sanbunno-ichi.github.io/pymunk_de_smartball/
+  author: sanbunnoichi
+  contact: mailto:sanbunnoichi1962@gmail.com
+  desc: A Smartball simulator using the pymunk library
+
+- id: 127
+  title: minesweeper
+  site: https://github.com/tiquer17/pyxel/tree/main/minesweeper
+  author: tiquer17
+  contact: https://github.com/tiquer17
+  desc: A Minesweeper game
+
+- id: 126
+  title: PyxelRogue
+  site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/pyxelrogue
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A traditional roguelike game
+
+- id: 125
+  title: "Gamaguchi's Munch Panic"
+  site: https://github.com/naoto714714/pyxel-mogumogu-panic
+  author: naoto
+  contact: https://github.com/naoto714714
+  desc: A simple action game
+
+- id: 124
+  title: Pyxel2D
+  site: https://github.com/jay-kumogata/Pyxel2D
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A simple physics engine
+
+- id: 123
+  title: Columsme
+  site: https://github.com/qzk4078/columusume_public
+  author: QZK
+  contact: https://x.com/qzakusega
+  desc: A falling-block puzzle game
+
+- id: 122
+  title: pymunk_de_pinball
+  site: https://sanbunno-ichi.github.io/pymunk_de_pinball/
+  author: sanbunnoichi
+  contact: mailto:sanbunnoichi1962@gmail.com
+  desc: A pinball simulator using the pymunk library
+
+- id: 121
+  title: Falling is learning
+  site: https://sqddy.itch.io/falling-is-learning
+  author: squiddy
+  contact: https://github.com/squiddy
+  desc: A memory puzzle
+
+- id: 120
+  title: pyxelvania
+  site: https://github.com/hulk89/pyxelvania
+  author: hulk89
+  contact: https://github.com/Hulk89
+  desc: A simple metroidvania
+
+- id: 119
+  title: Tower of Ashura
+  site: https://ashura.tsapps.net/
+  author: Goldics
+  contact: https://x.com/tsapps_goldics
+  desc: A simple dungeon-crawling RPG
+
+- id: 118
+  title: LLM Action (TBD)
+  author: Kyukkyu
+  contact: https://x.com/Synoyan
+  desc: An action game with a chatty LLM
+
+- id: 117
+  title: OMEGA CHRONICLE
+  author: ToraMaru
+  contact: https://x.com/7diY7MaRRUChIFE
+  desc: An RPG
+
+- id: 116
+  title: "Push!"
+  site: https://yyuta342.itch.io/push
+  author: yuta
+  contact: https://x.com/yyuta342
+  desc: An action puzzle game
+
+- id: 115
+  title: Second Best
+  site: https://aged99oow.github.io/second/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: "An abstract strategy game to block the opponent's best hand"
+
+- id: 114
+  title: Pyxel Bobbles
+  site: https://github.com/sanbunno-ichi/pyxelpb
+  author: sanbunnoichi
+  contact: mailto:sanbunnoichi1962@gmail.com
+  desc: A Puzzle Bobble-like game
+
+- id: 113
+  title: Seafish
+  site: https://s3bw.github.io/seafish
+  author: s3bw
+  contact: https://github.com/s3bw
+  desc: A chess AI you can play against
+
+- id: 112
+  title: Bubbles
+  site: https://github.com/helpcomputer/bubbles
+  author: Adam
+  contact: https://x.com/badcomputer0
+  desc: An arcade action game
+
+- id: 111
+  title: Sarananda
+  site: https://github.com/kadoyan/sarananda
+  author: KADOYAN
+  contact: https://x.com/kadoyan
+  desc: An escape game set inside an unidentified star
+
+- id: 110
+  title: Pyxel Block
+  site: https://github.com/sanbunno-ichi/pyxelblk
+  author: sanbunnoichi
+  contact: mailto:sanbunnoichi1962@gmail.com
+  desc: A block-breaking game
+
+- id: 109
+  title: Try Your Flash Memory
+  site: https://github.com/IgarashisanT/TryYourFlashMemory
+  author: IgarashisanT
+  contact: https://x.com/IgarashisanT
+  desc: A short-term memory and visual acuity test
+
+- id: 108
+  title: Ticoban
+  site: https://github.com/son-link/ticoban-pyxel
+  author: Son Link
+  contact: https://x.com/sonlink
+  desc: A Sokoban clone
+
+- id: 107
+  title: Mini Zelda
+  site: https://aged99oow.github.io/zelda/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A reduced version of The Legend of Zelda (NES)
+
+- id: 106
+  title: mandelzoom
+  site: https://github.com/sanbunno-ichi/fracanim#mandelzoom
+  author: sanbunnoichi
+  contact: mailto:sanbunnoichi1962@gmail.com
+  desc: A multicolor Mandelbrot drawing tool
+
+- id: 105
+  title: Sougwachi
+  site: https://dee-okinawa.com/game/sougachi/
+  author: Yoshinori Honda
+  contact: https://x.com/dee_okinawa
+  desc: "A game about distributing New Year's gifts to visiting relatives"
+
+- id: 104
+  title: Mahjong
+  site: https://github.com/sanbunno-ichi/pyxelmj
+  author: sanbunnoichi
+  contact: mailto:sanbunnoichi1962@gmail.com
+  desc: A two-player Mahjong game against the computer
+
+- id: 103
+  title: ACLM
+  site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/aclm
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A game where you pilot a plane and defeat an enemy
+
+- id: 102
+  title: Pinball
+  site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/pinball
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A pinball simulator
+
+- id: 101
+  title: Pen Apple
+  site: https://www.youtube.com/watch?v=I1tEa5poHl0
+  author: RuneBlaze
+  desc: A roguelike deckbuilder powered by LLMs
+
+- id: 100
+  title: Cellular Automata
+  site: https://juliangroen.github.io/cellular-automata/
+  author: Julian
+  contact: https://github.com/juliangroen
+  desc: "An implementation of Conway's Game of Life"
+
+- id: 99
+  title: Hieroglyph_Editor
+  site: https://koidemizu.github.io/post/hieroglyph/
+  author: koidemizu
+  desc: A small editor that converts Japanese into hieroglyphs
+
+- id: 98
+  title: Pyxel Invaders
+  site: https://github.com/sanbunno-ichi/pyxelinv
+  author: sanbunnoichi
+  contact: mailto:sanbunnoichi1962@gmail.com
+  desc: A Space Invaders-like shooting game
+
+- id: 97
+  title: MrColorHD
+  site: https://mrcolorhd.itch.io/carma-junino
+  author: Carma Junino
+  desc: A platformer about a popular Brazilian festival
+
+- id: 96
+  title: Mini Typing
+  site: https://aged99oow.github.io/typing/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A Japanese–English translation typing game
+
+- id: 95
+  title: Poker
+  site: https://github.com/Hiekichi/Poker
+  author: Hiekichi
+  desc: A tabletop card game
+
+- id: 94
+  title: Attacker
+  site: https://github.com/Hiekichi/Attacker
+  author: Hiekichi
+  desc: A retro shooting game
+
+- id: 93
+  title: Stellar Blazer
+  site: https://github.com/Hiekichi/StellarBlazer
+  author: Hiekichi
+  desc: A shooting game
+
+- id: 92
+  title: Vortexion
+  site: https://github.com/helpcomputer/vortexion
+  author: Adam
+  contact: https://x.com/badcomputer0
+  desc: A shoot-em-up
+
+- id: 91
+  title: ChottoCopter
+  site: https://github.com/Hiekichi/ChottoCopter
+  author: Hiekichi
+  desc: A hostage rescue game
+
+- id: 90
+  title: CheaperDepth
+  site: https://github.com/Hiekichi/CheeperDepth
+  author: Hiekichi
+  desc: A depth charge game
+
+- id: 89
+  title: Kanixian
+  site: https://github.com/Hiekichi/Kanixian
+  author: Hiekichi
+  desc: A shooting game
+
+- id: 88
+  title: BakudanKun
+  site: https://github.com/Hiekichi/BakudanKunPy
+  author: Hiekichi
+  desc: A bomber game
+
+- id: 87
+  title: LF3DP
+  site: https://github.com/sichaozhang1112/LF3DP
+  author: GANAH
+  contact: https://github.com/sichaozhang1112/PEANUX
+  desc: A game about drawing a closed-loop sketch of a dream
+
+- id: 86
+  title: MazeWalkGame
+  site: https://github.com/Hiekichi/MazeWalkGame
+  author: Hiekichi
+  desc: A dot-eating game
+
+- id: 85
+  title: obakeHunt
+  site: https://sirococoa.github.io/obakeHunt/
+  author: sirococoa
+  contact: https://x.com/sirococoa1
+  desc: A shooting game with a finger gun
+
+- id: 84
+  title: Ostle
+  site: https://aged99oow.github.io/ostle/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: An abstract strategy game on a 5x5 square grid
+
+- id: 83
+  title: Dice Arithmetic
+  site: https://aged99oow.github.io/dice/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A game where you make the number closest to the target
+
+- id: 82
+  title: Sangoku Historia
+  site: https://github.com/shiromofufactory/pyxel-sangokushi-guide
+  author: frenchbread
+  contact: https://x.com/frenchbread1222
+  desc: A strategic simulation game set in the Three Kingdoms
+
+- id: 81
+  title: Lode Runner Remake
+  site: https://dauet.github.io/ld/
+  author: dauet
+  contact: https://x.com/rfsguhfgkohbf
+  desc: A Lode Runner remake (IREM + NES)
+
+- id: 80
+  title: Scratch Lesson Port
+  site: https://edward.delaporte.us/pyxel/doodlebug/
+  author: EdTheDev
+  contact: https://github.com/edthedev
+  desc: A Pyxel version of MIT Scratch lessons
+
+- id: 79
+  title: Shroomy Shroom
+  site: https://takaneichinose.itch.io/shroomy-shroom
+  author: Takane
+  contact: https://x.com/takane_ichi
+  desc: A side-scrolling survival game made for Remix It Jam 2023
+
+- id: 78
+  title: Mini RPG
+  site: https://aged99oow.github.io/rpg/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A no-save mini RPG
+
+- id: 77
+  title: Mini Pittan
+  site: https://aged99oow.github.io/pittan/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A Japanese word puzzle
+
+- id: 76
+  title: Pyxel Road Demo
+  site: https://github.com/ilya-ssh/PyxelRoadDemo
+  author: Ilya
+  contact: https://github.com/ilya-ssh
+  desc: An OutRun-like road with scalable sprites and a parallax background
+
+- id: 75
+  title: Chip8Mini
+  site: https://github.com/jay-kumogata/Chip8Mini
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A CHIP-8 emulator that runs inside the game cabinet
+
+- id: 74
+  title: Panelund
+  site: https://aged99oow.github.io/panel/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A boss fight where you surround and charge the enemy boss
+
+- id: 73
+  title: Othellomino
+  site: https://aged99oow.github.io/othello/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: An Othello variant with polyominoes
+
+- id: 72
+  title: PyGmc4
+  site: https://github.com/jay-kumogata/PyGmc4
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A Gakken GMC-4 emulator in Python
+
+- id: 71
+  title: mini-space
+  site: https://github.com/bhunao/minispace_pyxel
+  author: bhunao
+  contact: https://github.com/bhunao
+  desc: A mini shooter with many projectiles
+
+- id: 70
+  title: Mini Mario
+  site: https://aged99oow.github.io/mario/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A reduced version of Super Mario Bros. (NES)
+
+- id: 69
+  title: Mini Mahjong
+  site: https://aged99oow.github.io/mahjong/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A Mahjong game with reduced tiles
+
+- id: 68
+  title: Mini Shogi
+  site: https://aged99oow.github.io/shogi/
+  author: aged99oow
+  contact: https://x.com/aged99
+  desc: A shogi game with reduced pieces on a 5x5 board
+
+- id: 67
+  title: Tiny Tale
+  author: Fbrzd
+  contact: https://x.com/dungeon__world
+  desc: A minimalist RPG with online ranking
+
+- id: 66
+  title: 8bit BGM generator
+  site: https://retro-bgm-generator.web.app/
+  author: frenchbread
+  contact: https://x.com/frenchbread1222
+  desc: A tool to automatically generate 3-channel Pyxel sounds
+
+- id: 65
+  title: kektris
+  site: https://github.com/KonstantinKlepikov/kektris
+  author: KonstantinKlepikov
+  contact: https://github.com/KonstantinKlepikov
+  desc: A four-quadrant Tetris game
+
+- id: 64
+  title: Target_shooting
+  site: https://koidemizu.github.io/post/action-shooting/
+  author: koidemizu
+  contact: https://github.com/koidemizu
+  desc: A simple action shooting game
+
+- id: 63
+  title: Unnamed RPG
+  site: https://github.com/helpcomputer
+  author: Adam
+  contact: https://x.com/helpcomputer0
+  desc: A simple RPG with 1v1 combat and party shuffling
+
+- id: 62
+  title: Hopping Hiyoko
+  site: https://github.com/rococomico/Pyxel_games
+  author: rococomico
+  contact: https://x.com/rococomico
+  desc: A game about helping chicks reach higher places
+
+- id: 61
+  title: Baba Is You
+  site: https://github.com/Fraser-Greenlee/baba-is-you
+  author: Fraser Greenlee
+  contact: https://x.com/FraserGreenlee
+  desc: A Baba Is You demake
+
+- id: 60
+  title: Dragon Quest 1 for Pyxel
+  site: https://pyxel-dq1.web.app/?gamepad=enabled
+  author: frenchbread
+  contact: https://x.com/frenchbread1222
+  desc: A port of the NES game of the same name
+
+- id: 59
+  title: Emergency Button
+  site: https://emergency-button.com/
+  author: Tokoroteen
+  contact: https://x.com/Tokoroteen__
+  desc: A clone of the emergency stop button at a train station
+
+- id: 58
+  title: SUSHI SHOOTER
+  site: https://github.com/sejiseji/pyxel-sushi
+  author: sejiseji
+  contact: https://x.com/sejiijes
+  desc: A sushi shooting game
+
+- id: 57
+  title: Floppy Dog
+  site: https://github.com/badrain-games/fancon/
+  author: JosephFerano
+  contact: https://github.com/JosephFerano
+  desc: A Flappy Bird clone
+
+- id: 56
+  title: Pie, Robot
+  site: https://github.com/jonnyroutley/robot-game
+  author: Jonathan Routley
+  contact: https://github.com/jonnyroutley
+  desc: A pizza-ingredient stacking game
+
+- id: 55
+  title: Moscow Nights
+  site: https://aliskda.itch.io/moscownights
+  author: s1tf
+  contact: https://github.com/s1tf
+  desc: A tower defense game
+
+- id: 54
+  title: SEKISAI
+  site: https://store.steampowered.com/app/2154790/SEKISAI_puzzle_action/
+  author: sewohayami
+  contact: https://x.com/hayami_sewo
+  desc: A side-scrolling puzzle action game
+
+- id: 53
+  title: Tetris Pyxel
+  site: https://github.com/mehrdad-mixtape/Tetris_Pyxel/
+  author: mehrdad-mixtape
+  contact: https://github.com/mehrdad-mixtape
+  desc: A classic Tetris game based on Tetris DX for Game Boy Color
+
+- id: 52
+  title: Pyxel Rogue
+  site: https://cereale.itch.io/pyxel-rogue
+  author: Antoine-bdc
+  contact: https://github.com/Antoine-bdc
+  desc: A roguelike shooter with randomly generated rooms
+
+- id: 51
+  title: Tu-tu-tuweeeeep
+  site: https://cereale.itch.io/tu-tu-tuweeeep
+  author: Antoine-bdc
+  contact: https://github.com/Antoine-bdc
+  desc: A fixed screen platformer with a 30-second time limit
+
+- id: 50
+  title: Bit Maze
+  site: https://github.com/takaneichinose/pyxel_bit_maze
+  author: Takane
+  contact: https://x.com/takane_ichi
+  desc: A puzzle-platformer
+
+- id: 49
+  title: Interceptor
+  author: Adam
+  contact: https://x.com/helpcomputer0
+  desc: An action side-scroller
+
+- id: 48
+  title: The last space fighter
+  site: https://github.com/yuiio/last-space-fighter
+  author: Yuiio
+  contact: mailto:yuiio@sotodesign.org
+  desc: A space shooter
+
+- id: 47
+  title: pytouch
+  site: https://github.com/kra53n/pytouch
+  author: kra53n
+  contact: https://github.com/kra53n
+  desc: A hyper-casual game
+
+- id: 46
+  title: GrowyGardens
+  site: https://github.com/SuperZooper3/GrowyGardens
+  author: SuperZooper3
+  contact: https://github.com/SuperZooper3
+  desc: A high-speed chaotic farming simulator
+
+- id: 45
+  title: "platformer: prototype"
+  site: https://github.com/lemon24/platformer/blob/master/test.py
+  author: lemon24
+  contact: https://github.com/lemon24
+  desc: A 2D platformer prototype with two layers
+
+- id: 44
+  title: PyxelChip8
+  site: https://github.com/jay-kumogata/RetroGames
+  author: Jay Kumogata
+  contact: https://x.com/jay_kumogata
+  desc: A CHIP-8 emulator
+
+- id: 43
+  title: Mini-Solitaire
+  site: https://github.com/SteelWool32/mini-solitaire
+  author: SteelWool32
+  contact: https://github.com/SteelWool32
+  desc: "A \"demake\" of Klondike Solitaire"
+
+- id: 42
+  title: Screen Melt
+  site: https://github.com/ameuret/screenMeltDoom
+  author: ameuret
+  contact: https://github.com/ameuret
+  desc: A screen-melting effect
+
+- id: 41
+  title: Tetris
+  site: https://github.com/3w36zj6/Tetris
+  author: 3w36zj6
+  contact: https://github.com/3w36zj6
+  desc: A Tetris game
+
+- id: 40
+  title: PyxelSand2
+  site: https://github.com/HarryPeach/PyxelSand2
+  author: HarryPeach
+  contact: https://github.com/HarryPeach
+  desc: "A \"falling sand\" style game"
+
+- id: 39
+  title: Maze generation
+  site: https://github.com/timfi/pyxel_games
+  author: timfi
+  contact: https://github.com/timfi
+  desc: A maze generator
+
+- id: 38
+  title: Sudoku Solver
+  site: https://github.com/timfi/pyxel_games
+  author: timfi
+  contact: https://github.com/timfi
+  desc: A Sudoku solver
+
+- id: 37
+  title: Hybrid
+  site: https://github.com/gediminasz/games
+  author: gediminasz
+  contact: https://github.com/gediminasz
+  desc: A game about splicing DNA
+
+- id: 36
+  title: Onset
+  site: https://github.com/gediminasz/games
+  author: gediminasz
+  contact: https://github.com/gediminasz
+  desc: A Guitar Hero-style game where you can play any song
+
+- id: 35
+  title: Typo
+  site: https://github.com/gediminasz/games
+  author: gediminasz
+  contact: https://github.com/gediminasz
+  desc: A typing game
+
+- id: 34
+  title: pyLodeRunner
+  author: tako2
+  contact: https://x.com/tako2
+  desc: A classic Lode Runner clone
+
+- id: 33
+  title: Censor
+  site: https://gamedev.ru/flame/forum/?id=252482
+  author: aliskda
+  desc: Papers, Please alike
+
+- id: 32
+  title: Ostrov
+  site: https://gamedev.ru/flame/forum/?id=245207
+  author: aliskda
+  desc: A survival game
+
+- id: 31
+  title: Snow Planet
+  site: https://gamedev.ru/flame/forum/?id=248258
+  author: aliskda
+  desc: A tower defense / RTS game
+
+- id: 30
+  title: Fiction-X
+  site: https://github.com/k-o-matic/fictionx
+  author: k-o-matic
+  desc: A side-scrolling old-school shooting game
+
+- id: 29
+  title: Chip 8 Pyxelized
+  author: Deckarep
+  contact: https://x.com/deckarep
+  desc: A CHIP-8 emulator
+
+- id: 28
+  title: Orange Juice Invasion
+  site: https://zoltek-s.itch.io/oji
+  author: Arthus
+  contact: mailto:arthus@meuret.net
+  desc: A vertical shoot-em-up
+
+- id: 27
+  title: Mineral Planets
+  site: https://gamedev.ru/flame/forum/?id=246559
+  author: aliskda
+  desc: A space RTS
+
+- id: 26
+  title: Valkyrie
+  author: Adam
+  contact: https://x.com/helpcomputer0
+  desc: A shoot-em-up
+
+- id: 25
+  title: Pyxel Golf
+  author: Adam
+  contact: https://x.com/helpcomputer0
+  desc: A golf game with a course editor
+
+- id: 24
+  title: World of Trout
+  author: Provo
+  desc: A business simulation game
+
+- id: 23
+  title: "Quick shoot!"
+  author: miso
+  contact: https://x.com/miso_2324
+  desc: A 360-degree shooter
+
+- id: 22
+  title: Bansoko
+  site: https://github.com/kfurtak1024/bansoko
+  author: Krzysztof Furtak
+  contact: https://github.com/kfurtak1024
+  desc: A space-themed Sokoban clone
+
+- id: 21
+  title: Keikogyugo
+  site: https://koidemizu.itch.io/keikogyugo
+  author: koidemizu
+  contact: https://github.com/koidemizu
+  desc: "A simulation game based on Japan's \"Sengoku Jidai\""
+
+- id: 20
+  title: Pyxel Raycast
+  site: https://github.com/danmacnaughtan/pyxel-raycast
+  author: Dan MacNaughtan
+  contact: https://github.com/danmacnaughtan
+  desc: A basic raycast example
+
+- id: 19
+  title: Regicide
+  site: https://koidemizu.itch.io/regicide
+  author: koidemizu
+  contact: https://github.com/koidemizu
+  desc: A simple retro action RPG
+
+- id: 18
+  title: Nyan Cat
+  site: https://github.com/3w36zj6/NyanCat
+  author: 3w36zj6
+  contact: https://github.com/3w36zj6
+  desc: A simple shooting game with Nyan Cat
+
+- id: 17
+  title: Onyx of Black
+  site: https://github.com/aburi6800/Python-OnyxOfBlack
+  author: aburi6800
+  contact: https://x.com/aburi6800
+  desc: A retro-style dungeon-crawl RPG
+
+- id: 16
+  title: mini shooting
+  site: https://github.com/5h00T/mini_shooting
+  author: shoot.er
+  contact: https://x.com/m4_sd
+  desc: A shoot-em-up with 20 missions
+
+- id: 15
+  title: Megaball
+  site: https://helpcomputer.itch.io/megaball
+  author: Adam
+  contact: https://x.com/helpcomputer0
+  desc: An arcade ball-physics game
+
+- id: 14
+  title: Maze
+  site: https://github.com/dannyso16/Maze
+  author: odanny
+  contact: https://x.com/dannyso16
+  desc: A simple 2D maze
+
+- id: 13
+  title: Pynasour
+  site: https://pypi.org/project/pynasour/
+  author: odanny
+  contact: https://x.com/dannyso16
+  desc: A Chrome T-Rex clone
+
+- id: 12
+  title: "Akalabeth: World of Doom"
+  site: https://github.com/CoBinee/akalabeth-pyxel
+  author: CoBinee
+  contact: https://x.com/cobinee
+  desc: "An Akalabeth: World of Doom clone"
+
+- id: 11
+  title: Tiny Trek
+  site: https://github.com/CoBinee/tinytrek-pyxel
+  author: CoBinee
+  contact: https://x.com/cobinee
+  desc: A Star Trek text game clone
+
+- id: 10
+  title: SFZ
+  site: https://github.com/CoBinee/sfz-pyxel
+  author: CoBinee
+  contact: https://x.com/cobinee
+  desc: "A Fantasy Zone + Space Harrier homage?"
+
+- id: 9
+  title: Umeroose
+  site: https://github.com/CoBinee/umeroose-pyxel
+  author: CoBinee
+  contact: https://x.com/cobinee
+  desc: A game about filling holes
+
+- id: 8
+  title: Pyxel Lander
+  site: https://humrochagf.itch.io/pyxel-lander
+  author: Humberto Rocha
+  contact: https://x.com/humrochagf
+  desc: A Lunar Lander tribute
+
+- id: 7
+  title: Numonis
+  author: Sakuramochi
+  contact: https://x.com/mochitetris
+  desc: A falling block puzzle that stacks numbers
+
+- id: 6
+  title: THE TOWER OF DRUAGA
+  author: 二天一流 ore
+  contact: https://x.com/ore57436902?lang=vi
+  desc: A port of THE TOWER OF DRUAGA
+
+- id: 5
+  title: Diddi and the Bugs
+  site: https://diddileija.itch.io/diddi-and-the-bugs
+  author: Diego Ramirez
+  contact: https://github.com/DiddiLeija
+  desc: A simple shooter
+
+- id: 4
+  title: Lovely Composer
+  site: https://1oogames.itch.io/lovely-composer
+  author: doc1oo (1oo_Games)
+  contact: https://x.com/1oo_games
+  desc: A chiptune music editor
+
+- id: 3
+  title: GRASLAY
+  site: https://www.freem.ne.jp/win/game/25159
+  author: Ontake44
+  contact: https://x.com/Ontake441
+  desc: A side-scrolling shoot-em-up
+
+- id: 2
+  title: Dungeon Witches
+  site: https://1oogames.itch.io/dungeon-witches
+  author: doc1oo (1oo_Games)
+  contact: https://x.com/1oo_games
+  desc: A roguelite game
+
+- id: 1
+  title: 30 Seconds of Daylight
+  site: https://github.com/kitao/30SecondsOfDaylight
+  author: Adam
+  contact: https://x.com/helpcomputer0
+  desc: A roguelike game and 1st Pyxel Jam winner

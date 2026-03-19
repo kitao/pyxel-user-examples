@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="{{css_path}}">
+</head>
+<body>
+  <header>
+    <h1><a href="{{root}}index.html">Pyxel User Examples</a></h1>
+    <p>A collection of games and tools created with <a href="https://github.com/kitao/pyxel">Pyxel</a></p>
+  </header>
+  <nav>
+    {{nav}}
+  </nav>
+  <main>
+    {{entries}}
+  </main>
+  <nav class="bottom-nav">
+    {{nav}}
+  </nav>
+  <footer>
+    <p>Submit your project via <a href="https://github.com/kitao/pyxel/issues/671">GitHub Issue #671</a></p>
+  </footer>
+  <div id="lightbox" onclick="this.style.display='none'">
+    <div id="lightbox-frame">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+  <script>
+    const lbImg = document.getElementById('lightbox-img');
+    const lb = document.getElementById('lightbox');
+    const PAD = 32;
+
+    document.querySelectorAll('.card img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', e => {
+        e.preventDefault();
+        // Load image to get natural size, then compute integer scale
+        const tmp = new Image();
+        tmp.onload = () => {
+          const maxW = window.innerWidth * 0.85 - PAD * 2;
+          const maxH = window.innerHeight * 0.85 - PAD * 2;
+          const scale = Math.min(maxW / tmp.naturalWidth, maxH / tmp.naturalHeight);
+          lbImg.style.width = (tmp.naturalWidth * scale) + 'px';
+          lbImg.style.height = (tmp.naturalHeight * scale) + 'px';
+          lbImg.src = img.src;
+          lb.style.display = 'flex';
+        };
+        tmp.src = img.src;
+      });
+    });
+  </script>
+</body>
+</html>
