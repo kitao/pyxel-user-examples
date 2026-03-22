@@ -39,4 +39,4 @@ python3 -m venv .venv
 
 ## Submit your project
 
-Please share yours [here](https://github.com/kitao/pyxel/issues/671)!
+Please share yours [here](https://github.com/kitao/pyxel/discussions/new?category=user-examples)!
