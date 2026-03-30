@@ -1,3 +1,10 @@
+- id: 175
+  title: Alien Evolution
+  site: https://github.com/alepoydes/alien-evolution-pyport
+  author: Igor Lobanov
+  contact: https://x.com/utilityunknown
+  desc: Pyxel port of the ZX Spectrum game Alien Evolution
+
 - id: 174
   title: Hover Racer
   site: https://haruka-apps-games.itch.io/hover-racer
