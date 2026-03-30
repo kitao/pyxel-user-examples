@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""Draft an X post for a given example entry."""
+import os
+import re
+import sys
+
+import yaml
+
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+TEMPLATE = """\
+{title} by {author} is now on Pyxel User Examples!
+Submissions are always welcome!
+
+Pyxelユーザー作品集を更新しました。
+コード非公開や日本語での投稿でも大丈夫です。
+皆さんのご投稿をお待ちしています！
+
+https://kitao.github.io/pyxel-user-examples/
+
+#pyxel #python #gamedev"""
+
+
+def load_entries():
+    with open(os.path.join(ROOT_DIR, "examples.yml")) as f:
+        return yaml.safe_load(f)
+
+
+def x_username(contact):
+    """Extract @username from an X/Twitter URL, or return None."""
+    m = re.match(r"https?://(?:www\.)?(?:x|twitter)\.com/([^/?#]+)", contact)
+    return f"@{m.group(1)}" if m else None
+
+
+def main():
+    if len(sys.argv) != 2 or not sys.argv[1].isdigit():
+        print(f"Usage: {sys.argv[0]} <id>", file=sys.stderr)
+        sys.exit(1)
+
+    target_id = int(sys.argv[1])
+    entries = load_entries()
+
+    for entry in entries:
+        if entry["id"] == target_id:
+            break
+    else:
+        print(f"Entry #{target_id} not found", file=sys.stderr)
+        sys.exit(1)
+
+    contact = entry.get("contact", "")
+    username = x_username(contact)
+    author = username if username else entry["author"]
+
+    print(TEMPLATE.format(title=entry["title"], author=author))
+
+
+if __name__ == "__main__":
+    main()
