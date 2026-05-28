@@ -1,3 +1,24 @@
+- id: 180
+  title: Hanafuda Montecarlo
+  site: https://ninja-cop.github.io/Hanafuda-Montecarlo/
+  author: saizo
+  contact: https://x.com/Saizo_KOGAKURE
+  desc: Hanafuda solitaire using Monte Carlo rules
+
+- id: 179
+  title: Hanafuda Koikoi
+  site: https://ninja-cop.github.io/Hanafuda-Koikoi/
+  author: saizo
+  contact: https://x.com/Saizo_KOGAKURE
+  desc: Traditional Japanese push-your-luck card game
+
+- id: 178
+  title: Hanafuda Solitaire
+  site: https://ninja-cop.github.io/Hanafuda-Solitaire/
+  author: saizo
+  contact: https://x.com/Saizo_KOGAKURE
+  desc: Standard Klondike solitaire with Hanafuda cards
+
 - id: 177
   title: Kudamono Merge
   site: https://takeshic.itch.io/kudamono-merge
