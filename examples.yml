@@ -66,7 +66,7 @@
   site: https://sanbunnoichi1962.web.fc2.com/pyxel/tempest.html
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
-  desc: Atari Tempest like game
+  desc: Atari Tempest-like game
 
 - id: 172
   title: Fikuś
@@ -80,7 +80,7 @@
   site: https://sanbunnoichi1962.web.fc2.com/pyxel/pyxelpac.html
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
-  desc: Pacman like game
+  desc: Pac-Man-like game
 
 - id: 170
   title: Falling Sand
@@ -129,7 +129,7 @@
   site: https://aged99oow.github.io/lama/
   author: aged99oow
   contact: https://x.com/aged99
-  desc: A shedding game where you shed or fold for minimum points
+  desc: A card game where you shed or fold for minimum points
 
 - id: 163
   title: Gekka no jin (Moonlit Formation)
@@ -164,7 +164,7 @@
   site: https://leo-imbert.itch.io/game-of-pyxels
   author: Léo Imbert
   contact: https://github.com/LeoI52
-  desc: A retro-style remake of Conway’s Game of Life
+  desc: A retro-style remake of Conway's Game of Life
 
 - id: 158
   title: "Queue It !"
@@ -206,7 +206,7 @@
   site: https://moq.dojin.com/pyxelgames.html
   author: MoQ(もっQ)
   contact: https://x.com/ronegray
-  desc: A game like an RPG from the early NES era
+  desc: A JRPG in the style of the early NES era
 
 - id: 152
   title: Hanafuda Tetris
@@ -554,7 +554,7 @@
   site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/aclm
   author: Jay Kumogata
   contact: https://x.com/jay_kumogata
-  desc: A game where you pilot a plane and defeat an enemy
+  desc: A game where you pilot a plane and defeat enemies
 
 - id: 102
   title: Pinball
@@ -1029,7 +1029,7 @@
   title: Censor
   site: https://gamedev.ru/flame/forum/?id=252482
   author: aliskda
-  desc: Papers, Please alike
+  desc: A Papers, Please-like game
 
 - id: 32
   title: Ostrov
@@ -1180,7 +1180,7 @@
   site: https://github.com/CoBinee/sfz-pyxel
   author: CoBinee
   contact: https://x.com/cobinee
-  desc: "A Fantasy Zone + Space Harrier homage?"
+  desc: A Fantasy Zone + Space Harrier homage
 
 - id: 9
   title: Umeroose
