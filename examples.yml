@@ -1,3 +1,10 @@
+- id: 185
+  title: Hanafuda Freecell
+  site: https://ninja-cop.github.io/Hanafuda-Freecell/
+  author: saizo
+  contact: https://x.com/Saizo_KOGAKURE
+  desc: FreeCell solitaire with Hanafuda cards
+
 - id: 184
   title: Last Emulator
   site: https://game-de-it.github.io/last-emulator-web/
