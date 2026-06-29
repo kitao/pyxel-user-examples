@@ -1,3 +1,10 @@
+- id: 189
+  title: Tetris
+  site: https://ninja-cop.github.io/Tetris/
+  author: saizo
+  contact: https://x.com/Saizo_KOGAKURE
+  desc: A Tetris game
+
 - id: 188
   title: PVNM
   site: https://github.com/game-de-it/pvnm
