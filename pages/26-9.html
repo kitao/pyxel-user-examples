@@ -10,25 +10,36 @@
 <body>
   <header>
     <h1><a href="../index.html">Pyxel User Examples</a></h1>
-    <p>Works made with <a href="https://github.com/kitao/pyxel" target="_blank" rel="noopener">Pyxel</a>. Please share yours <a href="https://github.com/kitao/pyxel/discussions/new?category=user-examples" target="_blank" rel="noopener">here</a>!</p>
+    <p>
+      Works made with <a href="https://github.com/kitao/pyxel" target="_blank" rel="noopener">Pyxel</a>.
+      Please share yours <a href="https://github.com/kitao/pyxel/discussions/new?category=user-examples" target="_blank" rel="noopener">here</a>!
+    </p>
   </header>
   <nav>
-    <a href="../pages/43-26.html" class="nav-arrow">◀</a>
-    <a href="../index.html">187-170</a>
-    <a href="../pages/169-152.html">169-152</a>
-    <a href="../pages/151-134.html">151-134</a>
-    <a href="../pages/133-116.html">133-116</a>
-    <a href="../pages/115-98.html">115-98</a>
-    <a href="../pages/97-80.html">97-80</a>
-    <a href="../pages/79-62.html">79-62</a>
-    <a href="../pages/61-44.html">61-44</a>
-    <a href="../pages/43-26.html">43-26</a>
-    <span>25-8</span>
-    <a href="../pages/7-1.html">7-1</a>
-    <a href="../pages/7-1.html" class="nav-arrow">▶</a>
+    <a href="../pages/44-27.html" class="nav-arrow">◀</a>
+    <a href="../index.html">188-171</a>
+    <a href="../pages/170-153.html">170-153</a>
+    <a href="../pages/152-135.html">152-135</a>
+    <a href="../pages/134-117.html">134-117</a>
+    <a href="../pages/116-99.html">116-99</a>
+    <a href="../pages/98-81.html">98-81</a>
+    <a href="../pages/80-63.html">80-63</a>
+    <a href="../pages/62-45.html">62-45</a>
+    <a href="../pages/44-27.html">44-27</a>
+    <span>26-9</span>
+    <a href="../pages/8-1.html">8-1</a>
+    <a href="../pages/8-1.html" class="nav-arrow">▶</a>
   </nav>
   <main>
     <div class="card">
+  <img src="../images/26.gif" alt="Valkyrie" loading="lazy">
+  <div class="card-body">
+    <h2>#26 Valkyrie</h2>
+    <div class="meta">by <a href="https://x.com/helpcomputer0" target="_blank" rel="noopener">Adam</a></div>
+    <div class="desc">A shoot-em-up</div>
+  </div>
+</div>
+<div class="card">
   <img src="../images/25.gif" alt="Pyxel Golf" loading="lazy">
   <div class="card-body">
     <h2>#25 Pyxel Golf</h2>
@@ -164,58 +175,64 @@
     <div class="desc">A game about filling holes</div>
   </div>
 </div>
-<div class="card">
-  <img src="../images/8.gif" alt="Pyxel Lander" loading="lazy">
-  <div class="card-body">
-    <h2><a href="https://humrochagf.itch.io/pyxel-lander" target="_blank" rel="noopener">#8 Pyxel Lander</a></h2>
-    <div class="meta">by <a href="https://x.com/humrochagf" target="_blank" rel="noopener">Humberto Rocha</a></div>
-    <div class="desc">A Lunar Lander tribute</div>
-  </div>
-</div>
   </main>
   <nav class="bottom-nav">
-    <a href="../pages/43-26.html" class="nav-arrow">◀</a>
-    <a href="../index.html">187-170</a>
-    <a href="../pages/169-152.html">169-152</a>
-    <a href="../pages/151-134.html">151-134</a>
-    <a href="../pages/133-116.html">133-116</a>
-    <a href="../pages/115-98.html">115-98</a>
-    <a href="../pages/97-80.html">97-80</a>
-    <a href="../pages/79-62.html">79-62</a>
-    <a href="../pages/61-44.html">61-44</a>
-    <a href="../pages/43-26.html">43-26</a>
-    <span>25-8</span>
-    <a href="../pages/7-1.html">7-1</a>
-    <a href="../pages/7-1.html" class="nav-arrow">▶</a>
+    <a href="../pages/44-27.html" class="nav-arrow">◀</a>
+    <a href="../index.html">188-171</a>
+    <a href="../pages/170-153.html">170-153</a>
+    <a href="../pages/152-135.html">152-135</a>
+    <a href="../pages/134-117.html">134-117</a>
+    <a href="../pages/116-99.html">116-99</a>
+    <a href="../pages/98-81.html">98-81</a>
+    <a href="../pages/80-63.html">80-63</a>
+    <a href="../pages/62-45.html">62-45</a>
+    <a href="../pages/44-27.html">44-27</a>
+    <span>26-9</span>
+    <a href="../pages/8-1.html">8-1</a>
+    <a href="../pages/8-1.html" class="nav-arrow">▶</a>
   </nav>
-  <div id="lightbox" onclick="this.style.display='none';document.body.classList.remove('lightbox-open')">
+  <div id="lightbox">
     <div id="lightbox-frame">
       <img id="lightbox-img" src="" alt="">
     </div>
   </div>
   <script>
-    const lbImg = document.getElementById('lightbox-img');
-    const lb = document.getElementById('lightbox');
-    lb.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
-    const PAD = 32;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-img');
+    const LIGHTBOX_PADDING = 32;
 
-    document.querySelectorAll('.card img').forEach(img => {
-      img.style.cursor = 'pointer';
-      img.addEventListener('click', e => {
-        e.preventDefault();
-        // Scale image to fit viewport while keeping pixel art sharp
-        const tmp = new Image();
-        tmp.onload = () => {
-          const maxW = window.innerWidth * 0.85 - PAD * 2;
-          const maxH = window.innerHeight * 0.85 - PAD * 2;
-          const scale = Math.min(maxW / tmp.naturalWidth, maxH / tmp.naturalHeight);
-          lbImg.style.width = (tmp.naturalWidth * scale) + 'px';
-          lbImg.style.height = (tmp.naturalHeight * scale) + 'px';
-          lbImg.src = img.src;
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.classList.remove('lightbox-open');
+    }
+
+    lightbox.addEventListener('click', closeLightbox);
+    lightbox.addEventListener(
+      'touchmove',
+      event => event.preventDefault(),
+      { passive: false }
+    );
+
+    document.querySelectorAll('.card img').forEach(image => {
+      image.style.cursor = 'pointer';
+      image.addEventListener('click', event => {
+        event.preventDefault();
+        // Scale image to fit the viewport while keeping pixel art sharp.
+        const previewImage = new Image();
+        previewImage.onload = () => {
+          const maxWidth = window.innerWidth * 0.85 - LIGHTBOX_PADDING * 2;
+          const maxHeight = window.innerHeight * 0.85 - LIGHTBOX_PADDING * 2;
+          const scale = Math.min(
+            maxWidth / previewImage.naturalWidth,
+            maxHeight / previewImage.naturalHeight
+          );
+          lightboxImage.style.width = (previewImage.naturalWidth * scale) + 'px';
+          lightboxImage.style.height = (previewImage.naturalHeight * scale) + 'px';
+          lightboxImage.src = image.src;
           document.body.classList.add('lightbox-open');
-          lb.style.display = 'flex';
+          lightbox.style.display = 'flex';
         };
-        tmp.src = img.src;
+        previewImage.src = image.src;
       });
     });
   </script>
