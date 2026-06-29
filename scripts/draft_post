@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-"""Draft an X post for a given example entry."""
-
-import os
+from pathlib import Path
 import re
 import sys
 
 import yaml
 
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATE = """\
 {title} by {author} is now on Pyxel User Examples!
@@ -25,12 +23,10 @@ https://github.com/kitao/pyxel/discussions/new?category=user-examples
 
 
 def load_entries():
-    with open(os.path.join(ROOT_DIR, "examples.yml")) as f:
-        return yaml.safe_load(f)
+    return yaml.safe_load((ROOT_DIR / "examples.yml").read_text(encoding="utf-8"))
 
 
-def x_username(contact):
-    """Extract @username from an X/Twitter URL, or return None."""
+def extract_x_username(contact):
     m = re.match(r"https?://(?:www\.)?(?:x|twitter)\.com/([^/?#]+)", contact)
     return f"@{m.group(1)}" if m else None
 
@@ -50,8 +46,7 @@ def main():
         print(f"Entry #{target_id} not found", file=sys.stderr)
         sys.exit(1)
 
-    contact = entry.get("contact", "")
-    username = x_username(contact)
+    username = extract_x_username(entry.get("contact", ""))
     author = username if username else entry["author"]
 
     print(TEMPLATE.format(title=entry["title"], author=author))
