@@ -1,3 +1,17 @@
+- id: 191
+  title: AmericanDreams
+  site: https://spsoft.server-on.net/webgames/AmericanDreams.html
+  author: Takeshi Maeda (SPSoft)
+  contact: https://spsoft.server-on.net
+  desc: A retro arcade dot-eater game about collecting dots while escaping enemies
+
+- id: 190
+  title: Megademo Plasma Scene
+  site: https://codeandmagic.samurai-apps.com/works/megademo-plasma-scene-21664
+  author: ムンペイ
+  contact: https://x.com/munepi
+  desc: A 1990s-style megademo plasma scene using palette animation
+
 - id: 189
   title: Tetris
   site: https://ninja-cop.github.io/Tetris/
