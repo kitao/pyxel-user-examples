@@ -1,3 +1,17 @@
+- id: 193
+  title: GPD-Pocket-POS
+  site: https://github.com/game-de-it/GPD-Pocket-POS
+  author: moto
+  contact: https://x.com/0_game_it
+  desc: Pocket operating shell for the original GPD Pocket
+
+- id: 192
+  title: Hanafuda Drop
+  site: https://ninja-cop.github.io/Hanafuda-Drop/
+  author: saizo
+  contact: https://x.com/Saizo_KOGAKURE
+  desc: A puzzle action game
+
 - id: 191
   title: AmericanDreams
   site: https://spsoft.server-on.net/webgames/AmericanDreams.html
