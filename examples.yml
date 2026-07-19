@@ -1,3 +1,17 @@
+- id: 199
+  title: QR Snake Game
+  site: https://codeandmagic.samurai-apps.com/works/qr-snake-game-72877
+  author: haruka_apps
+  contact: https://x.com/haruka_apps
+  desc: A snake game played inside a scannable QR code
+
+- id: 198
+  title: "PAI: Pyxel AI"
+  site: https://github.com/game-de-it/PAI
+  author: moto
+  contact: https://x.com/0_game_it
+  desc: Pyxel AI frontend application for local LLMs
+
 - id: 197
   title: Cyber Globe Earth
   site: https://codeandmagic.samurai-apps.com/works/cyber-globe-earth-96042

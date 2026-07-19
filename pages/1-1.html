@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyxel User Examples</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html">Pyxel User Examples</a></h1>
+    <p>
+      Works made with <a href="https://github.com/kitao/pyxel" target="_blank" rel="noopener">Pyxel</a>.
+      Please share yours <a href="https://github.com/kitao/pyxel/discussions/new?category=user-examples" target="_blank" rel="noopener">here</a>!
+    </p>
+  </header>
+  <nav>
+    <a href="../pages/19-2.html" class="nav-arrow">◀</a>
+    <a href="../index.html">199-182</a>
+    <a href="../pages/181-164.html">181-164</a>
+    <a href="../pages/163-146.html">163-146</a>
+    <a href="../pages/145-128.html">145-128</a>
+    <a href="../pages/127-110.html">127-110</a>
+    <a href="../pages/109-92.html">109-92</a>
+    <a href="../pages/91-74.html">91-74</a>
+    <a href="../pages/73-56.html">73-56</a>
+    <a href="../pages/55-38.html">55-38</a>
+    <a href="../pages/37-20.html">37-20</a>
+    <a href="../pages/19-2.html">19-2</a>
+    <span>1-1</span>
+    <span class="nav-arrow disabled">▶</span>
+  </nav>
+  <main>
+    <div class="card">
+  <img src="../images/1.gif" alt="30 Seconds of Daylight" loading="lazy">
+  <div class="card-body">
+    <h2><a href="https://github.com/kitao/30SecondsOfDaylight" target="_blank" rel="noopener">#1 30 Seconds of Daylight</a></h2>
+    <div class="meta">by <a href="https://x.com/helpcomputer0" target="_blank" rel="noopener">Adam</a></div>
+    <div class="desc">A roguelike game and 1st Pyxel Jam winner</div>
+  </div>
+</div>
+  </main>
+  <nav class="bottom-nav">
+    <a href="../pages/19-2.html" class="nav-arrow">◀</a>
+    <a href="../index.html">199-182</a>
+    <a href="../pages/181-164.html">181-164</a>
+    <a href="../pages/163-146.html">163-146</a>
+    <a href="../pages/145-128.html">145-128</a>
+    <a href="../pages/127-110.html">127-110</a>
+    <a href="../pages/109-92.html">109-92</a>
+    <a href="../pages/91-74.html">91-74</a>
+    <a href="../pages/73-56.html">73-56</a>
+    <a href="../pages/55-38.html">55-38</a>
+    <a href="../pages/37-20.html">37-20</a>
+    <a href="../pages/19-2.html">19-2</a>
+    <span>1-1</span>
+    <span class="nav-arrow disabled">▶</span>
+  </nav>
+  <div id="lightbox">
+    <div id="lightbox-frame">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-img');
+    const LIGHTBOX_PADDING = 32;
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.classList.remove('lightbox-open');
+    }
+
+    lightbox.addEventListener('click', closeLightbox);
+    lightbox.addEventListener(
+      'touchmove',
+      event => event.preventDefault(),
+      { passive: false }
+    );
+
+    document.querySelectorAll('.card img').forEach(image => {
+      image.style.cursor = 'pointer';
+      image.addEventListener('click', event => {
+        event.preventDefault();
+        // Scale image to fit the viewport while keeping pixel art sharp.
+        const previewImage = new Image();
+        previewImage.onload = () => {
+          const maxWidth = window.innerWidth * 0.85 - LIGHTBOX_PADDING * 2;
+          const maxHeight = window.innerHeight * 0.85 - LIGHTBOX_PADDING * 2;
+          const scale = Math.min(
+            maxWidth / previewImage.naturalWidth,
+            maxHeight / previewImage.naturalHeight
+          );
+          lightboxImage.style.width = (previewImage.naturalWidth * scale) + 'px';
+          lightboxImage.style.height = (previewImage.naturalHeight * scale) + 'px';
+          lightboxImage.src = image.src;
+          document.body.classList.add('lightbox-open');
+          lightbox.style.display = 'flex';
+        };
+        previewImage.src = image.src;
+      });
+    });
+  </script>
+</body>
+</html>
