@@ -1,3 +1,10 @@
+- id: 202
+  title: WordFrikile
+  site: https://codeberg.org/son_link/WordFrikile
+  author: Son Link
+  contact: https://x.com/sonlink
+  desc: A Wordle clone with geek and freak vocabulary words
+
 - id: 201
   title: "Braveforce: The Lost Dominion of the Void"
   site: https://store.steampowered.com/app/4238660
