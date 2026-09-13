@@ -1,3 +1,10 @@
+- id: 209
+  title: Pixel Flight Simulator
+  site: https://github.com/game-de-it/pixel-flight-simulator
+  author: moto
+  contact: https://x.com/0_game_it
+  desc: A light-aircraft flight simulator with cockpit instruments and career jobs
+
 - id: 208
   title: Tunnel Dodge
   site: https://kitao.github.io/pyxel/web/code-maker/?github=sdkfz181tiger/Zenn/a4ce8d12cc565e5cf915f6103d9d1375854c07b3/images/books/675e49a3e4d34b/pce/flappy
