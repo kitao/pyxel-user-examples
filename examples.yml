@@ -1,3 +1,10 @@
+- id: 210
+  title: Dark Ruins
+  site: https://koidemizu.github.io/post/command-rpg/
+  author: koidemizu
+  contact: https://github.com/koidemizu
+  desc: A turn-based command RPG where you battle down 35 floors of ruins
+
 - id: 209
   title: Pixel Flight Simulator
   site: https://github.com/game-de-it/pixel-flight-simulator
