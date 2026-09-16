@@ -1,3 +1,10 @@
+- id: 212
+  title: Electron
+  site: https://mit-mit-randomprojectlab.github.io/pyweek37/electron_pyweek37.html
+  author: mit-mit
+  contact: https://github.com/mit-mit-randomprojectlab
+  desc: A game where you play as an electron inside an old television's cathode-ray tube
+
 - id: 211
   title: RHYTHM GAME VS GIGI!
   site: https://github.com/yukikingyoo/VSGIGI/blob/main/README.md
