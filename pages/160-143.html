@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pyxel User Examples</title>
   <link rel="icon" href="../favicon.ico">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css?v=cfc13451bb54">
+  <script src="../lightbox.js?v=cfc13451bb54" defer></script>
 </head>
 <body>
   <header>
@@ -15,12 +16,12 @@
       Please share yours <a href="https://github.com/kitao/pyxel/discussions/new?category=user-examples" target="_blank" rel="noopener">here</a>!
     </p>
   </header>
-  <nav>
-    <a href="../pages/178-161.html" class="nav-arrow">◀</a>
+  <nav aria-label="Example pages">
+    <a href="../pages/178-161.html" class="nav-arrow" aria-label="Previous page" rel="prev">◀</a>
     <a href="../index.html">214-197</a>
     <a href="../pages/196-179.html">196-179</a>
     <a href="../pages/178-161.html">178-161</a>
-    <span>160-143</span>
+    <span aria-current="page">160-143</span>
     <a href="../pages/142-125.html">142-125</a>
     <a href="../pages/124-107.html">124-107</a>
     <a href="../pages/106-89.html">106-89</a>
@@ -29,7 +30,7 @@
     <a href="../pages/52-35.html">52-35</a>
     <a href="../pages/34-17.html">34-17</a>
     <a href="../pages/16-1.html">16-1</a>
-    <a href="../pages/142-125.html" class="nav-arrow">▶</a>
+    <a href="../pages/142-125.html" class="nav-arrow" aria-label="Next page" rel="next">▶</a>
   </nav>
   <main>
     <div class="card">
@@ -45,7 +46,7 @@
   <div class="card-body">
     <h2><a href="https://leo-imbert.itch.io/game-of-pyxels" target="_blank" rel="noopener">#159 Game of Pyxels</a></h2>
     <div class="meta">by <a href="https://github.com/LeoI52" target="_blank" rel="noopener">Léo Imbert</a></div>
-    <div class="desc">A retro-style remake of Conway's Game of Life</div>
+    <div class="desc">A retro-style remake of Conway&#x27;s Game of Life</div>
   </div>
 </div>
 <div class="card">
@@ -75,7 +76,7 @@
 <div class="card">
   <img src="../images/155.gif" alt="Hanafuda Pon" loading="lazy">
   <div class="card-body">
-    <h2><a href="https://github.com/ninja-cop/RetroGames/tree/main/hanafudaPon" target="_blank" rel="noopener">#155 Hanafuda Pon</a></h2>
+    <h2><a href="https://github.com/ninja-cop/Hanafuda-Pon" target="_blank" rel="noopener">#155 Hanafuda Pon</a></h2>
     <div class="meta">by <a href="https://github.com/ninja-cop" target="_blank" rel="noopener">saizo</a></div>
     <div class="desc">A game of clearing sets of three matching Hanafuda cards</div>
   </div>
@@ -99,7 +100,7 @@
 <div class="card">
   <img src="../images/152.gif" alt="Hanafuda Tetris" loading="lazy">
   <div class="card-body">
-    <h2><a href="https://github.com/ninja-cop/RetroGames/tree/main/hanafudaTetris" target="_blank" rel="noopener">#152 Hanafuda Tetris</a></h2>
+    <h2><a href="https://github.com/ninja-cop/Hanafuda-Tetris" target="_blank" rel="noopener">#152 Hanafuda Tetris</a></h2>
     <div class="meta">by <a href="https://github.com/ninja-cop" target="_blank" rel="noopener">saizo</a></div>
     <div class="desc">A game where you match three Hanafuda cards of the same month</div>
   </div>
@@ -169,20 +170,20 @@
   </div>
 </div>
 <div class="card">
-  <img src="../images/143.gif" alt="Gem'X Pyxel Clone" loading="lazy">
+  <img src="../images/143.gif" alt="Gem&#x27;X Pyxel Clone" loading="lazy">
   <div class="card-body">
-    <h2><a href="https://sanbunnoichi1962.web.fc2.com/pyxel_contents.html#gemx" target="_blank" rel="noopener">#143 Gem'X Pyxel Clone</a></h2>
+    <h2><a href="https://sanbunnoichi1962.web.fc2.com/pyxel_contents.html#gemx" target="_blank" rel="noopener">#143 Gem&#x27;X Pyxel Clone</a></h2>
     <div class="meta">by <a href="mailto:sanbunnoichi1962@gmail.com" target="_blank" rel="noopener">sanbunnoichi</a></div>
     <div class="desc">An Amiga puzzle game clone</div>
   </div>
 </div>
   </main>
-  <nav class="bottom-nav">
-    <a href="../pages/178-161.html" class="nav-arrow">◀</a>
+  <nav class="bottom-nav" aria-label="Example pages">
+    <a href="../pages/178-161.html" class="nav-arrow" aria-label="Previous page" rel="prev">◀</a>
     <a href="../index.html">214-197</a>
     <a href="../pages/196-179.html">196-179</a>
     <a href="../pages/178-161.html">178-161</a>
-    <span>160-143</span>
+    <span aria-current="page">160-143</span>
     <a href="../pages/142-125.html">142-125</a>
     <a href="../pages/124-107.html">124-107</a>
     <a href="../pages/106-89.html">106-89</a>
@@ -191,52 +192,12 @@
     <a href="../pages/52-35.html">52-35</a>
     <a href="../pages/34-17.html">34-17</a>
     <a href="../pages/16-1.html">16-1</a>
-    <a href="../pages/142-125.html" class="nav-arrow">▶</a>
+    <a href="../pages/142-125.html" class="nav-arrow" aria-label="Next page" rel="next">▶</a>
   </nav>
   <div id="lightbox">
     <div id="lightbox-frame">
       <img id="lightbox-img" src="" alt="">
     </div>
   </div>
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-img');
-    const LIGHTBOX_PADDING = 32;
-
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-      document.body.classList.remove('lightbox-open');
-    }
-
-    lightbox.addEventListener('click', closeLightbox);
-    lightbox.addEventListener(
-      'touchmove',
-      event => event.preventDefault(),
-      { passive: false }
-    );
-
-    document.querySelectorAll('.card img').forEach(image => {
-      image.style.cursor = 'pointer';
-      image.addEventListener('click', event => {
-        event.preventDefault();
-        // Scale image to fit the viewport while keeping pixel art sharp.
-        const previewImage = new Image();
-        previewImage.onload = () => {
-          const maxWidth = window.innerWidth * 0.85 - LIGHTBOX_PADDING * 2;
-          const maxHeight = window.innerHeight * 0.85 - LIGHTBOX_PADDING * 2;
-          const scale = Math.min(
-            maxWidth / previewImage.naturalWidth,
-            maxHeight / previewImage.naturalHeight
-          );
-          lightboxImage.style.width = (previewImage.naturalWidth * scale) + 'px';
-          lightboxImage.style.height = (previewImage.naturalHeight * scale) + 'px';
-          lightboxImage.src = image.src;
-          document.body.classList.add('lightbox-open');
-          lightbox.style.display = 'flex';
-        };
-        previewImage.src = image.src;
-      });
-    });
-  </script>
 </body>
 </html>

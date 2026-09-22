@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pyxel User Examples</title>
   <link rel="icon" href="../favicon.ico">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css?v=cfc13451bb54">
+  <script src="../lightbox.js?v=cfc13451bb54" defer></script>
 </head>
 <body>
   <header>
@@ -15,8 +16,8 @@
       Please share yours <a href="https://github.com/kitao/pyxel/discussions/new?category=user-examples" target="_blank" rel="noopener">here</a>!
     </p>
   </header>
-  <nav>
-    <a href="../pages/34-17.html" class="nav-arrow">◀</a>
+  <nav aria-label="Example pages">
+    <a href="../pages/34-17.html" class="nav-arrow" aria-label="Previous page" rel="prev">◀</a>
     <a href="../index.html">214-197</a>
     <a href="../pages/196-179.html">196-179</a>
     <a href="../pages/178-161.html">178-161</a>
@@ -28,8 +29,8 @@
     <a href="../pages/70-53.html">70-53</a>
     <a href="../pages/52-35.html">52-35</a>
     <a href="../pages/34-17.html">34-17</a>
-    <span>16-1</span>
-    <span class="nav-arrow disabled">▶</span>
+    <span aria-current="page">16-1</span>
+    <span class="nav-arrow disabled" aria-hidden="true">▶</span>
   </nav>
   <main>
     <div class="card">
@@ -100,7 +101,7 @@
   <img src="../images/8.gif" alt="Pyxel Lander" loading="lazy">
   <div class="card-body">
     <h2><a href="https://humrochagf.itch.io/pyxel-lander" target="_blank" rel="noopener">#8 Pyxel Lander</a></h2>
-    <div class="meta">by <a href="https://x.com/humrochagf" target="_blank" rel="noopener">Humberto Rocha</a></div>
+    <div class="meta">by <a href="https://github.com/humrochagf" target="_blank" rel="noopener">Humberto Rocha</a></div>
     <div class="desc">A Lunar Lander tribute</div>
   </div>
 </div>
@@ -161,8 +162,8 @@
   </div>
 </div>
   </main>
-  <nav class="bottom-nav">
-    <a href="../pages/34-17.html" class="nav-arrow">◀</a>
+  <nav class="bottom-nav" aria-label="Example pages">
+    <a href="../pages/34-17.html" class="nav-arrow" aria-label="Previous page" rel="prev">◀</a>
     <a href="../index.html">214-197</a>
     <a href="../pages/196-179.html">196-179</a>
     <a href="../pages/178-161.html">178-161</a>
@@ -174,53 +175,13 @@
     <a href="../pages/70-53.html">70-53</a>
     <a href="../pages/52-35.html">52-35</a>
     <a href="../pages/34-17.html">34-17</a>
-    <span>16-1</span>
-    <span class="nav-arrow disabled">▶</span>
+    <span aria-current="page">16-1</span>
+    <span class="nav-arrow disabled" aria-hidden="true">▶</span>
   </nav>
   <div id="lightbox">
     <div id="lightbox-frame">
       <img id="lightbox-img" src="" alt="">
     </div>
   </div>
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-img');
-    const LIGHTBOX_PADDING = 32;
-
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-      document.body.classList.remove('lightbox-open');
-    }
-
-    lightbox.addEventListener('click', closeLightbox);
-    lightbox.addEventListener(
-      'touchmove',
-      event => event.preventDefault(),
-      { passive: false }
-    );
-
-    document.querySelectorAll('.card img').forEach(image => {
-      image.style.cursor = 'pointer';
-      image.addEventListener('click', event => {
-        event.preventDefault();
-        // Scale image to fit the viewport while keeping pixel art sharp.
-        const previewImage = new Image();
-        previewImage.onload = () => {
-          const maxWidth = window.innerWidth * 0.85 - LIGHTBOX_PADDING * 2;
-          const maxHeight = window.innerHeight * 0.85 - LIGHTBOX_PADDING * 2;
-          const scale = Math.min(
-            maxWidth / previewImage.naturalWidth,
-            maxHeight / previewImage.naturalHeight
-          );
-          lightboxImage.style.width = (previewImage.naturalWidth * scale) + 'px';
-          lightboxImage.style.height = (previewImage.naturalHeight * scale) + 'px';
-          lightboxImage.src = image.src;
-          document.body.classList.add('lightbox-open');
-          lightbox.style.display = 'flex';
-        };
-        previewImage.src = image.src;
-      });
-    });
-  </script>
 </body>
 </html>

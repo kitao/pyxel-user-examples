@@ -1,57 +1,29 @@
 #!/usr/bin/env python3
-from pathlib import Path
-import shutil
+import argparse
+import re
+from hashlib import sha256
+from html import escape
+from string import Template
 
 import yaml
+from catalog import ROOT_DIR, load_entries, validate_previews
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
 ITEMS_PER_PAGE = 18
-PAGES_DIR = ROOT_DIR / "pages"
 SITE_TITLE = "Pyxel User Examples"
 
 
-def load_entries():
-    return yaml.safe_load((ROOT_DIR / "examples.yml").read_text(encoding="utf-8"))
-
-
-def load_template():
-    return (ROOT_DIR / "page.html").read_text(encoding="utf-8")
-
-
-def escape_html(value):
-    return (
-        str(value)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
+def render_link(text, url):
+    if not url:
+        return escape(text)
+    return f'<a href="{escape(url)}" target="_blank" rel="noopener">{escape(text)}</a>'
 
 
 def render_entry(entry, root):
     entry_id = entry["id"]
-    title = escape_html(entry["title"])
-    desc = escape_html(entry.get("desc", ""))
-    author = escape_html(entry["author"])
-    site = entry.get("site", "")
-    contact = entry.get("contact", "")
-
-    if site:
-        title_html = (
-            f'<a href="{escape_html(site)}" target="_blank" rel="noopener">'
-            f"#{entry_id} {title}</a>"
-        )
-    else:
-        title_html = f"#{entry_id} {title}"
-
-    if contact:
-        author_html = (
-            f'<a href="{escape_html(contact)}" target="_blank" rel="noopener">'
-            f"{author}</a>"
-        )
-    else:
-        author_html = author
-
+    title = escape(entry["title"])
+    desc = escape(entry["desc"])
+    title_html = render_link(f"#{entry_id} {entry['title']}", entry.get("site"))
+    author_html = render_link(entry["author"], entry.get("contact"))
     img_src = f"{root}images/{entry_id}.gif"
 
     return f"""<div class="card">
@@ -78,64 +50,103 @@ def build_nav(pages, current_idx, root):
     parts = []
 
     if current_idx > 0:
-        parts.append(f'<a href="{page_href(pages, current_idx - 1, root)}" class="nav-arrow">◀</a>')
+        parts.append(
+            f'<a href="{page_href(pages, current_idx - 1, root)}" '
+            'class="nav-arrow" aria-label="Previous page" rel="prev">◀</a>'
+        )
     else:
-        parts.append('<span class="nav-arrow disabled">◀</span>')
+        parts.append('<span class="nav-arrow disabled" aria-hidden="true">◀</span>')
 
     for i, page_entries in enumerate(pages):
         label = page_range_label(page_entries)
         if i == current_idx:
-            parts.append(f"<span>{label}</span>")
+            parts.append(f'<span aria-current="page">{label}</span>')
         else:
             parts.append(f'<a href="{page_href(pages, i, root)}">{label}</a>')
 
     if current_idx < len(pages) - 1:
-        parts.append(f'<a href="{page_href(pages, current_idx + 1, root)}" class="nav-arrow">▶</a>')
+        parts.append(
+            f'<a href="{page_href(pages, current_idx + 1, root)}" '
+            'class="nav-arrow" aria-label="Next page" rel="next">▶</a>'
+        )
     else:
-        parts.append('<span class="nav-arrow disabled">▶</span>')
+        parts.append('<span class="nav-arrow disabled" aria-hidden="true">▶</span>')
 
     return "\n    ".join(parts)
 
 
-def generate():
-    entries = load_entries()
-    template = load_template()
+def render_pages(root=ROOT_DIR):
+    entries = load_entries(root)
+    validate_previews(entries, root)
+    template = Template((root / "templates" / "page.html").read_text(encoding="utf-8"))
+    asset_version = sha256(
+        (root / "styles.css").read_bytes() + (root / "lightbox.js").read_bytes()
+    ).hexdigest()[:12]
     pages = [
-        entries[i : i + ITEMS_PER_PAGE]
-        for i in range(0, len(entries), ITEMS_PER_PAGE)
+        entries[i : i + ITEMS_PER_PAGE] for i in range(0, len(entries), ITEMS_PER_PAGE)
     ]
 
-    if PAGES_DIR.exists():
-        shutil.rmtree(PAGES_DIR)
-    PAGES_DIR.mkdir()
-
+    output = {}
     for i, page_entries in enumerate(pages):
         label = page_range_label(page_entries)
+        prefix = "" if i == 0 else "../"
+        filepath = root / ("index.html" if i == 0 else f"pages/{label}.html")
+        output[filepath] = template.substitute(
+            title=SITE_TITLE,
+            root=prefix,
+            asset_version=asset_version,
+            nav=build_nav(pages, i, prefix),
+            entries="\n".join(render_entry(e, prefix) for e in page_entries),
+        )
+    return output
 
-        if i == 0:
-            filepath = ROOT_DIR / "index.html"
-            root = ""
-            css_path = "styles.css"
-        else:
-            filepath = PAGES_DIR / f"{label}.html"
-            root = "../"
-            css_path = "../styles.css"
 
-        entries_html = "\n".join(render_entry(e, root) for e in page_entries)
-        nav = build_nav(pages, i, root)
+def generate(root=ROOT_DIR, check=False):
+    # Validate and render everything before touching the published files.
+    output = render_pages(root)
+    stale = {
+        p
+        for p in (root / "pages").glob("*.html")
+        if re.fullmatch(r"[0-9]+-[0-9]+\.html", p.name)
+    } - output.keys()
+    changed = {
+        p
+        for p, html in output.items()
+        if not p.exists() or p.read_text(encoding="utf-8") != html
+    }
 
-        html = template
-        html = html.replace("{{title}}", SITE_TITLE)
-        html = html.replace("{{css_path}}", css_path)
-        html = html.replace("{{root}}", root)
-        html = html.replace("{{nav}}", nav)
-        html = html.replace("{{entries}}", entries_html)
+    if check:
+        for filepath in sorted(changed | stale):
+            print(f"Out of date: {filepath.relative_to(root)}")
+        if changed or stale:
+            return 1
+        print(f"All {len(output)} generated pages are up to date")
+        return 0
 
-        filepath.write_text(html, encoding="utf-8")
-        print(f"  {filepath}")
+    for filepath in sorted(changed):
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+        filepath.write_text(output[filepath], encoding="utf-8")
+        print(f"Updated: {filepath.relative_to(root)}")
+    for filepath in sorted(stale):
+        filepath.unlink()
+        print(f"Removed: {filepath.relative_to(root)}")
+    print(f"Generated {len(output)} pages")
+    return 0
 
-    print(f"\nGenerated {len(pages)} pages from {len(entries)} entries")
+
+def main():
+    parser = argparse.ArgumentParser(description="Build the static example gallery.")
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="check generated pages without changing files",
+    )
+    args = parser.parse_args()
+    try:
+        return generate(check=args.check)
+    except (OSError, ValueError, KeyError, yaml.YAMLError) as error:
+        parser.exit(1, f"Error: {error}\n")
 
 
 if __name__ == "__main__":
-    generate()
+    raise SystemExit(main())

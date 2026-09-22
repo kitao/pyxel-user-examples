@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-from pathlib import Path
+import argparse
 import re
-import sys
 
 import yaml
-
-ROOT_DIR = Path(__file__).resolve().parent.parent
+from catalog import load_entries
 
 TEMPLATE = """\
 {title} by {author} is now on Pyxel User Examples!
@@ -22,29 +20,38 @@ https://github.com/kitao/pyxel/discussions/new?category=user-examples
 #pyxel #python #gamedev"""
 
 
-def load_entries():
-    return yaml.safe_load((ROOT_DIR / "examples.yml").read_text(encoding="utf-8"))
-
-
 def extract_x_username(contact):
-    m = re.match(r"https?://(?:www\.)?(?:x|twitter)\.com/([^/?#]+)", contact)
-    return f"@{m.group(1)}" if m else None
+    match = re.fullmatch(
+        r"https?://(?:www\.)?(?:x|twitter)\.com/([A-Za-z0-9_]{1,15})/?(?:[?#].*)?",
+        contact,
+        re.IGNORECASE,
+    )
+    if match and match.group(1).lower() not in {
+        "home",
+        "intent",
+        "share",
+        "search",
+        "i",
+        "explore",
+    }:
+        return f"@{match.group(1)}"
+    return None
 
 
 def main():
-    if len(sys.argv) != 2 or not sys.argv[1].isdigit():
-        print(f"Usage: {sys.argv[0]} <id>", file=sys.stderr)
-        sys.exit(1)
-
-    target_id = int(sys.argv[1])
-    entries = load_entries()
+    parser = argparse.ArgumentParser(description="Draft an X post for an example.")
+    parser.add_argument("id", type=int, help="example ID")
+    args = parser.parse_args()
+    try:
+        entries = load_entries()
+    except (OSError, ValueError, yaml.YAMLError) as error:
+        parser.exit(1, f"Error: {error}\n")
 
     for entry in entries:
-        if entry["id"] == target_id:
+        if entry["id"] == args.id:
             break
     else:
-        print(f"Entry #{target_id} not found", file=sys.stderr)
-        sys.exit(1)
+        parser.exit(1, f"Entry #{args.id} not found\n")
 
     username = extract_x_username(entry.get("contact", ""))
     author = username if username else entry["author"]

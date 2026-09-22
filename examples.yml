@@ -80,7 +80,7 @@
   site: https://5hh1.itch.io/laudive-with
   author: 5hh1
   contact: https://x.com/5_h_h_1
-  desc: A short sci-fi diving where you descend into an anomaly-infested abyss
+  desc: A short sci-fi diving game where you descend into an anomaly-infested abyss
 
 - id: 202
   title: WordFrikile
@@ -192,7 +192,7 @@
   site: https://github.com/game-de-it/pfe
   author: moto
   contact: https://x.com/0_game_it
-  desc: Pyxel frontend for emulator
+  desc: A Pyxel frontend for emulators
 
 - id: 186
   title: Hanafuda Spider Solitaire
@@ -413,7 +413,7 @@
 
 - id: 155
   title: Hanafuda Pon
-  site: https://github.com/ninja-cop/RetroGames/tree/main/hanafudaPon
+  site: https://github.com/ninja-cop/Hanafuda-Pon
   author: saizo
   contact: https://github.com/ninja-cop
   desc: A game of clearing sets of three matching Hanafuda cards
@@ -434,7 +434,7 @@
 
 - id: 152
   title: Hanafuda Tetris
-  site: https://github.com/ninja-cop/RetroGames/tree/main/hanafudaTetris
+  site: https://github.com/ninja-cop/Hanafuda-Tetris
   author: saizo
   contact: https://github.com/ninja-cop
   desc: A game where you match three Hanafuda cards of the same month
@@ -814,9 +814,9 @@
   desc: A Space Invaders-like shooting game
 
 - id: 97
-  title: MrColorHD
+  title: Carma Junino
   site: https://mrcolorhd.itch.io/carma-junino
-  author: Carma Junino
+  author: MrColorHD
   desc: A platformer about a popular Brazilian festival
 
 - id: 96
@@ -1417,7 +1417,7 @@
   title: Pyxel Lander
   site: https://humrochagf.itch.io/pyxel-lander
   author: Humberto Rocha
-  contact: https://x.com/humrochagf
+  contact: https://github.com/humrochagf
   desc: A Lunar Lander tribute
 
 - id: 7

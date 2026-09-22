@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$title</title>
+  <link rel="icon" href="${root}favicon.ico">
+  <link rel="stylesheet" href="${root}styles.css?v=$asset_version">
+  <script src="${root}lightbox.js?v=$asset_version" defer></script>
+</head>
+<body>
+  <header>
+    <h1><a href="${root}index.html">Pyxel User Examples</a></h1>
+    <p>
+      Works made with <a href="https://github.com/kitao/pyxel" target="_blank" rel="noopener">Pyxel</a>.
+      Please share yours <a href="https://github.com/kitao/pyxel/discussions/new?category=user-examples" target="_blank" rel="noopener">here</a>!
+    </p>
+  </header>
+  <nav aria-label="Example pages">
+    $nav
+  </nav>
+  <main>
+    $entries
+  </main>
+  <nav class="bottom-nav" aria-label="Example pages">
+    $nav
+  </nav>
+  <div id="lightbox">
+    <div id="lightbox-frame">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+</body>
+</html>
