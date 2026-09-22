@@ -214,20 +214,28 @@ class DraftTests(unittest.TestCase):
             self.assertIsNone(extract(url), url)
 
     def test_draft_uses_handle_or_author(self):
-        for entry_id, opening in [
-            (214, "Moon Legend by mit-mit"),
-            (209, "Pixel Flight Simulator by @0_game_it"),
+        for contact, author in [
+            ("https://github.com/Author", "Display Name"),
+            ("https://x.com/Author", "@Author"),
         ]:
+            entry = {
+                "id": 1,
+                "title": "Example",
+                "author": "Display Name",
+                "desc": "A game",
+                "contact": contact,
+            }
             with (
-                self.subTest(entry_id=entry_id),
-                patch.object(sys, "argv", ["draft_post", str(entry_id)]),
+                self.subTest(contact=contact),
+                patch.dict(DRAFT["main"].__globals__, load_entries=lambda: [entry]),
+                patch.object(sys, "argv", ["draft_post", "1"]),
             ):
                 output = StringIO()
                 with redirect_stdout(output):
                     DRAFT["main"]()
                 self.assertTrue(
                     output.getvalue().startswith(
-                        opening + " is now on Pyxel User Examples!"
+                        f"Example by {author} is now on Pyxel User Examples!"
                     )
                 )
 
