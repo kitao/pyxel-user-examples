@@ -22,15 +22,21 @@ def render_entry(entry, root):
     entry_id = entry["id"]
     title = escape(entry["title"])
     desc = escape(entry["desc"])
-    title_html = render_link(f"#{entry_id} {entry['title']}", entry.get("site"))
     author_html = render_link(entry["author"], entry.get("contact"))
+    site_html = ""
+    if entry.get("site"):
+        site_html = (
+            '<span class="site-link"><span class="separator" aria-hidden="true">|</span>'
+            f'<a href="{escape(entry["site"])}" target="_blank" rel="noopener" '
+            f'aria-label="Site for {title}">Site</a></span>'
+        )
     img_src = f"{root}images/{entry_id}.gif"
 
     return f"""<div class="card">
   <img src="{img_src}" alt="{title}" loading="lazy">
   <div class="card-body">
-    <h2>{title_html}</h2>
-    <div class="meta">by {author_html}</div>
+    <h2>#{entry_id} {title}</h2>
+    <div class="meta">by {author_html}{site_html}</div>
     <div class="desc">{desc}</div>
   </div>
 </div>"""

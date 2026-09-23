@@ -106,14 +106,18 @@ main {
   margin-bottom: 2px;
 }
 
-.card-body h2 a {
-  color: #e6edf3;
-}
-
 .card-body .meta {
   font-size: 0.75rem;
   color: #8b949e;
   margin-bottom: 4px;
+}
+
+.card-body .site-link {
+  white-space: nowrap;
+}
+
+.card-body .separator {
+  margin: 0 8px;
 }
 
 .card-body .desc {
