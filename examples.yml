@@ -1,3 +1,10 @@
+- id: 215
+  title: PyCon JP 2026 Keynote Trailer
+  site: https://github.com/kitao/pyconjp2026-keynote
+  author: Takashi Kitao
+  contact: https://x.com/kitao
+  desc: A keynote trailer with fireworks over a moonlit sea
+
 - id: 214
   title: Moon Legend
   site: https://mit-mit-randomprojectlab.github.io/pyweek41/moon_legend.html
