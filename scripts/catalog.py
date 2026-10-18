@@ -1,5 +1,7 @@
 """Load and validate the shared source of truth for the gallery and post drafts."""
 
+import struct
+import unicodedata
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -44,7 +46,8 @@ def load_entries(root=ROOT_DIR):
     previous_id = None
     for position, entry in enumerate(entries, start=1):
         if not isinstance(entry, dict):
-            raise ValueError(f"Entry {position} must be a mapping")
+            # A malformed catalog is bad data, which callers report as a ValueError.
+            raise ValueError(f"Entry {position} must be a mapping")  # noqa: TRY004
         missing = REQUIRED_FIELDS - entry.keys()
         unknown = entry.keys() - REQUIRED_FIELDS - OPTIONAL_FIELDS
         if missing or unknown:
@@ -67,7 +70,11 @@ def load_entries(root=ROOT_DIR):
                 not isinstance(value, str)
                 or not value
                 or value != value.strip()
-                or any(ord(char) < 32 for char in value)
+                # Control characters, line or paragraph separators, and lone surrogates
+                or any(
+                    unicodedata.category(char) in {"Cc", "Zl", "Zp", "Cs"}
+                    for char in value
+                )
             ):
                 raise ValueError(
                     f"Entry #{entry_id}: {field} must be nonempty, "
@@ -81,14 +88,17 @@ def load_entries(root=ROOT_DIR):
     return entries
 
 
-def validate_previews(entries, root=ROOT_DIR):
-    for entry in entries:
-        entry_id = entry["id"]
-        image_path = root / "images" / f"{entry_id}.gif"
-        if not image_path.is_file():
-            raise ValueError(
-                f"Entry #{entry_id}: missing {image_path.relative_to(root)}"
-            )
-        with image_path.open("rb") as image:
-            if image.read(6) not in {b"GIF87a", b"GIF89a"}:
-                raise ValueError(f"Entry #{entry_id}: preview must be a GIF image")
+def read_preview_size(entry_id, root=ROOT_DIR):
+    """Return the width and height of an entry's preview GIF."""
+    image_path = root / "images" / f"{entry_id}.gif"
+    if not image_path.is_file():
+        raise ValueError(f"Entry #{entry_id}: missing {image_path.relative_to(root)}")
+    with image_path.open("rb") as image:
+        header = image.read(10)
+    if len(header) < 10 or header[:6] not in {b"GIF87a", b"GIF89a"}:
+        raise ValueError(f"Entry #{entry_id}: preview must be a GIF image")
+    # The logical screen size, which the frames of a preview are drawn on
+    width, height = struct.unpack("<HH", header[6:])
+    if not width or not height:
+        raise ValueError(f"Entry #{entry_id}: preview has no size")
+    return width, height

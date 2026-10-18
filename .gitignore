@@ -5,3 +5,11 @@
 *.pyc
 .venv/
 __pycache__/
+
+# Node.js, Wrangler, and Playwright
+node_modules/
+.wrangler/
+test-results/
+
+# Build output
+dist/

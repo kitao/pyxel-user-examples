@@ -77,7 +77,7 @@
 
 - id: 208
   title: Tunnel Dodge
-  site: https://kitao.github.io/pyxel/web/code-maker/?github=sdkfz181tiger/Zenn/a4ce8d12cc565e5cf915f6103d9d1375854c07b3/images/books/675e49a3e4d34b/pce/flappy
+  site: https://kitao.dev/pyxel/code-maker/?github=sdkfz181tiger/Zenn/a4ce8d12cc565e5cf915f6103d9d1375854c07b3/images/books/675e49a3e4d34b/pce/flappy
   author: Kajiru
   contact: mailto:sdkfz181tiger@gmail.com
   desc: A Flappy Bird-style one-button game where you weave through tunnels
@@ -357,21 +357,21 @@
 
 - id: 168
   title: Cursed Caverns
-  site: https://kitao.github.io/pyxel/web/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.cursed_caverns&gamepad=enabled
+  site: https://kitao.dev/pyxel/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.cursed_caverns&gamepad=enabled
   author: Takashi Kitao
   contact: https://x.com/kitao
   desc: A platformer from the Pyxel Official Book
 
 - id: 167
   title: Mega Wing
-  site: https://kitao.github.io/pyxel/web/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.mega_wing&gamepad=enabled
+  site: https://kitao.dev/pyxel/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.mega_wing&gamepad=enabled
   author: Takashi Kitao
   contact: https://x.com/kitao
   desc: A shoot-em-up from the Pyxel Official Book
 
 - id: 166
   title: Space Rescue
-  site: https://kitao.github.io/pyxel/web/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.space_rescue&gamepad=enabled
+  site: https://kitao.dev/pyxel/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.space_rescue&gamepad=enabled
   author: Takashi Kitao
   contact: https://x.com/kitao
   desc: A one-button rescue game from the Pyxel Official Book

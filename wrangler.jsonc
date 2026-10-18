@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "pyxel-user-examples",
+  "compatibility_date": "2026-10-06",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "kitao.dev/pyxel/user-examples*", "zone_name": "kitao.dev" }],
+  "assets": { "directory": "./dist" },
+  "build": {
+    "command": "python3 scripts/build_pages",
+    "watch_dir": [
+      "examples.yml",
+      "images",
+      "templates",
+      "styles.css",
+      "lightbox.js",
+      "_headers",
+      "scripts/build_pages",
+      "scripts/catalog.py",
+    ],
+  },
+}

@@ -1,38 +1,31 @@
-const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightbox-img');
-const LIGHTBOX_PADDING = 32;
+// Show a preview enlarged in a modal dialog. Without JavaScript, the link opens the GIF.
+const lightbox = document.createElement('dialog');
+const closeButton = document.createElement('button');
+const lightboxImage = document.createElement('img');
+lightbox.className = 'lightbox';
+closeButton.type = 'button';
+closeButton.setAttribute('aria-label', 'Close preview');
+lightboxImage.alt = '';
+closeButton.append(lightboxImage);
+lightbox.append(closeButton);
+document.body.append(lightbox);
 
-function closeLightbox() {
-  lightbox.style.display = 'none';
-  document.body.classList.remove('lightbox-open');
-}
+// A click on the image, its frame, or the backdrop closes the dialog, as does Escape.
+lightbox.addEventListener('click', () => lightbox.close());
 
-lightbox.addEventListener('click', closeLightbox);
-lightbox.addEventListener(
-  'touchmove',
-  event => event.preventDefault(),
-  { passive: false }
-);
-
-document.querySelectorAll('.card img').forEach(image => {
-  image.style.cursor = 'pointer';
-  image.addEventListener('click', event => {
+for (const link of document.querySelectorAll('.preview')) {
+  link.addEventListener('click', (event) => {
+    // Leave modified clicks to the browser, such as opening the GIF in a new tab.
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
-    // Scale image to fit the viewport while keeping pixel art sharp.
-    const previewImage = new Image();
-    previewImage.onload = () => {
-      const maxWidth = window.innerWidth * 0.85 - LIGHTBOX_PADDING * 2;
-      const maxHeight = window.innerHeight * 0.85 - LIGHTBOX_PADDING * 2;
-      const scale = Math.min(
-        maxWidth / previewImage.naturalWidth,
-        maxHeight / previewImage.naturalHeight
-      );
-      lightboxImage.style.width = (previewImage.naturalWidth * scale) + 'px';
-      lightboxImage.style.height = (previewImage.naturalHeight * scale) + 'px';
-      lightboxImage.src = image.src;
-      document.body.classList.add('lightbox-open');
-      lightbox.style.display = 'flex';
-    };
-    previewImage.src = image.src;
+    const preview = link.querySelector('img');
+    // The size comes from the markup, so the image need not have loaded yet.
+    lightboxImage.style.setProperty(
+      '--ratio',
+      `${preview.getAttribute('width')} / ${preview.getAttribute('height')}`,
+    );
+    lightboxImage.src = link.href;
+    lightbox.setAttribute('aria-label', preview.alt);
+    lightbox.showModal();
   });
-});
+}

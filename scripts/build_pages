@@ -1,158 +1,101 @@
 #!/usr/bin/env python3
-import argparse
-import re
-from hashlib import sha256
-from html import escape
-from string import Template
+"""Build the gallery site into dist/."""
 
+import argparse
+import shutil
+
+import jinja2
 import yaml
-from catalog import ROOT_DIR, load_entries, validate_previews
+from catalog import ROOT_DIR, load_entries, read_preview_size
 
 ITEMS_PER_PAGE = 18
-SITE_TITLE = "Pyxel User Examples"
+# The Worker serves dist/ from the domain root, and the gallery under this path.
+SITE_DIR = "pyxel/user-examples"
+ASSETS = ("styles.css", "lightbox.js")
 
 
-def render_link(text, url):
-    if not url:
-        return escape(text)
-    return f'<a href="{escape(url)}" target="_blank" rel="noopener">{escape(text)}</a>'
-
-
-def render_entry(entry, root):
-    entry_id = entry["id"]
-    title = escape(entry["title"])
-    desc = escape(entry["desc"])
-    author_html = render_link(entry["author"], entry.get("contact"))
-    site_html = ""
-    if entry.get("site"):
-        site_html = (
-            '<span class="site-link"><span class="separator" aria-hidden="true">|</span>'
-            f'<a href="{escape(entry["site"])}" target="_blank" rel="noopener" '
-            f'aria-label="Site for {title}">Site</a></span>'
-        )
-    img_src = f"{root}images/{entry_id}.gif"
-
-    return f"""<div class="card">
-  <img src="{img_src}" alt="{title}" loading="lazy">
-  <div class="card-body">
-    <h2>#{entry_id} {title}</h2>
-    <div class="meta">by {author_html}{site_html}</div>
-    <div class="desc">{desc}</div>
-  </div>
-</div>"""
-
-
-def page_range_label(entries):
-    return f"{entries[0]['id']}-{entries[-1]['id']}"
-
-
-def page_href(pages, idx, root):
-    if idx == 0:
-        return f"{root}index.html"
-    return f"{root}pages/{page_range_label(pages[idx])}.html"
-
-
-def build_nav(pages, current_idx, root):
-    parts = []
-
-    if current_idx > 0:
-        parts.append(
-            f'<a href="{page_href(pages, current_idx - 1, root)}" '
-            'class="nav-arrow" aria-label="Previous page" rel="prev">◀</a>'
-        )
-    else:
-        parts.append('<span class="nav-arrow disabled" aria-hidden="true">◀</span>')
-
-    for i, page_entries in enumerate(pages):
-        label = page_range_label(page_entries)
-        if i == current_idx:
-            parts.append(f'<span aria-current="page">{label}</span>')
-        else:
-            parts.append(f'<a href="{page_href(pages, i, root)}">{label}</a>')
-
-    if current_idx < len(pages) - 1:
-        parts.append(
-            f'<a href="{page_href(pages, current_idx + 1, root)}" '
-            'class="nav-arrow" aria-label="Next page" rel="next">▶</a>'
-        )
-    else:
-        parts.append('<span class="nav-arrow disabled" aria-hidden="true">▶</span>')
-
-    return "\n    ".join(parts)
-
-
-def render_pages(root=ROOT_DIR):
-    entries = load_entries(root)
-    validate_previews(entries, root)
-    template = Template((root / "templates" / "page.html").read_text(encoding="utf-8"))
-    asset_version = sha256(
-        (root / "styles.css").read_bytes() + (root / "lightbox.js").read_bytes()
-    ).hexdigest()[:12]
-    pages = [
+def render_pages(entries, root):
+    """Return the HTML of each page by its path in the site."""
+    entries = [
+        dict(entry, size=read_preview_size(entry["id"], root)) for entry in entries
+    ]
+    chunks = [
         entries[i : i + ITEMS_PER_PAGE] for i in range(0, len(entries), ITEMS_PER_PAGE)
     ]
-
-    output = {}
-    for i, page_entries in enumerate(pages):
-        label = page_range_label(page_entries)
-        prefix = "" if i == 0 else "../"
-        filepath = root / ("index.html" if i == 0 else f"pages/{label}.html")
-        output[filepath] = template.substitute(
-            title=SITE_TITLE,
-            root=prefix,
-            asset_version=asset_version,
-            nav=build_nav(pages, i, prefix),
-            entries="\n".join(render_entry(e, prefix) for e in page_entries),
+    # Numbered pages keep their URLs as entries are added, and directory URLs are
+    # served without a redirect.
+    pages = [
+        {
+            "label": f"{chunk[0]['id']}-{chunk[-1]['id']}",
+            "dir": "" if number == 1 else f"page/{number}/",
+            "entries": chunk,
+        }
+        for number, chunk in enumerate(chunks, start=1)
+    ]
+    template = jinja2.Environment(
+        loader=jinja2.FileSystemLoader(root / "templates"),
+        autoescape=True,
+        undefined=jinja2.StrictUndefined,
+        trim_blocks=True,
+        lstrip_blocks=True,
+        keep_trailing_newline=True,
+    ).get_template("page.html")
+    return {
+        page["dir"] + "index.html": template.render(
+            pages=pages, index=index, root="../" * page["dir"].count("/")
         )
-    return output
-
-
-def generate(root=ROOT_DIR, check=False):
-    # Validate and render everything before touching the published files.
-    output = render_pages(root)
-    stale = {
-        p
-        for p in (root / "pages").glob("*.html")
-        if re.fullmatch(r"[0-9]+-[0-9]+\.html", p.name)
-    } - output.keys()
-    changed = {
-        p
-        for p, html in output.items()
-        if not p.exists() or p.read_text(encoding="utf-8") != html
+        for index, page in enumerate(pages)
     }
 
-    if check:
-        for filepath in sorted(changed | stale):
-            print(f"Out of date: {filepath.relative_to(root)}")
-        if changed or stale:
-            return 1
-        print(f"All {len(output)} generated pages are up to date")
-        return 0
 
-    for filepath in sorted(changed):
-        filepath.parent.mkdir(parents=True, exist_ok=True)
-        filepath.write_text(output[filepath], encoding="utf-8")
-        print(f"Updated: {filepath.relative_to(root)}")
-    for filepath in sorted(stale):
-        filepath.unlink()
-        print(f"Removed: {filepath.relative_to(root)}")
-    print(f"Generated {len(output)} pages")
-    return 0
+def source_path(root, name):
+    path = root / name
+    # A symlink could publish a file from outside the repository.
+    if path.resolve(strict=True) != path:
+        raise ValueError(f"Sources must not be symlinks: {name}")
+    return path
+
+
+def build(target, root):
+    """Validate the sources, then replace the contents of target with the site."""
+    root = root.resolve()
+    # The catalog and the template end up in the pages.
+    for name in ("examples.yml", "templates/page.html"):
+        source_path(root, name)
+    entries = load_entries(root)
+    pages = render_pages(entries, root)
+    sources = {"_headers": source_path(root, "_headers")}
+    for name in (*ASSETS, *(f"images/{entry['id']}.gif" for entry in entries)):
+        sources[f"{SITE_DIR}/{name}"] = source_path(root, name)
+    # Unlink a symlinked target instead of emptying the directory it points to.
+    if target.is_symlink():
+        target.unlink()
+    # Keep the directory itself, which a running wrangler dev serves from.
+    target.mkdir(parents=True, exist_ok=True)
+    for path in target.iterdir():
+        if path.is_dir() and not path.is_symlink():
+            shutil.rmtree(path)
+        else:
+            path.unlink()
+    for name, html in pages.items():
+        path = target / SITE_DIR / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(html, encoding="utf-8")
+    for name, source in sources.items():
+        path = target / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, path)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Build the static example gallery.")
-    parser.add_argument(
-        "--check",
-        action="store_true",
-        help="check generated pages without changing files",
-    )
-    args = parser.parse_args()
+    parser = argparse.ArgumentParser(description="Build the gallery site into dist/.")
+    parser.parse_args()
     try:
-        return generate(check=args.check)
-    except (OSError, ValueError, KeyError, yaml.YAMLError) as error:
+        build(ROOT_DIR / "dist", ROOT_DIR)
+    except (OSError, ValueError, yaml.YAMLError, jinja2.TemplateError) as error:
         parser.exit(1, f"Error: {error}\n")
+    print("Built the gallery in dist/")
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
