@@ -209,18 +209,14 @@ test('keyboard focus is visible', async ({ page }) => {
       ['.meta a', 'nav a', '.preview'].map((selector) => {
         const element = document.querySelector(selector);
         element.focus();
-        // The preview's outline is drawn on its image, inside the card.
-        const style = getComputedStyle(
-          selector === '.preview' ? element.firstElementChild : element,
-        );
-        return element.matches(':focus-visible') && style.outlineStyle !== 'none'
-          ? style.outlineWidth
-          : 'none';
+        if (!element.matches(':focus-visible')) return 'none';
+        const style = getComputedStyle(element, selector === 'nav a' ? '::after' : null);
+        return style.outlineStyle === 'solid' ? style.outlineWidth : style.borderTopWidth;
       }),
     );
   // A key press makes the following script focus visible, as keyboard focus is.
   await page.keyboard.press('Shift');
-  expect(await outlines()).toEqual(['1px', '1px', '2px']);
+  expect(await outlines()).toEqual(['1px', '1px', '1px']);
 });
 
 test('other clicks on a preview are left to the browser', async ({ page }) => {

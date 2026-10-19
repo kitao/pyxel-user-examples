@@ -23,8 +23,21 @@ a:hover {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+nav a:focus-visible::after {
   outline: 1px solid #58a6ff;
+  outline-offset: 2px;
+}
+
+header a:focus-visible,
+.meta a:focus-visible {
+  text-box: trim-both cap text;
+  outline: none;
+  border: 1px solid #58a6ff;
+  padding: 2px;
+  margin: -3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 header {
@@ -68,6 +81,21 @@ nav span {
   border-radius: 4px;
 }
 
+nav a {
+  position: relative;
+}
+
+nav a:focus-visible {
+  outline: none;
+}
+
+nav a:focus-visible::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+}
+
 nav span {
   background: #58a6ff;
   color: #0d1117;
@@ -95,11 +123,11 @@ main {
 .card {
   border: 1px solid #30363d;
   border-radius: 6px;
-  overflow: hidden;
   background: #161b22;
 }
 
 .card img {
+  border-radius: 5px 5px 0 0;
   width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
@@ -143,16 +171,6 @@ main {
 
 .preview {
   display: block;
-}
-
-/* Drawn inside the image, since the card clips anything outside it. */
-.preview:focus-visible {
-  outline: none;
-}
-
-.preview:focus-visible img {
-  outline: 2px solid #58a6ff;
-  outline-offset: -2px;
 }
 
 :root:has(.lightbox[open]) {
