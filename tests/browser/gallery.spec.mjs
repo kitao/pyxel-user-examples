@@ -211,7 +211,7 @@ test('keyboard focus is visible', async ({ page }) => {
         element.focus();
         if (!element.matches(':focus-visible')) return 'none';
         const style = getComputedStyle(element, selector === 'nav a' ? '::after' : null);
-        return style.outlineStyle === 'solid' ? style.outlineWidth : style.borderTopWidth;
+        return style.outlineStyle === 'solid' ? style.outlineWidth : 'none';
       }),
     );
   // A key press makes the following script focus visible, as keyboard focus is.

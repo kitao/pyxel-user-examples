@@ -29,17 +29,6 @@ nav a:focus-visible::after {
   outline-offset: 2px;
 }
 
-header a:focus-visible,
-.meta a:focus-visible {
-  text-box: trim-both cap text;
-  outline: none;
-  border: 1px solid #58a6ff;
-  padding: 2px;
-  margin: -3px;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-
 header {
   text-align: center;
   padding: 24px 0;
