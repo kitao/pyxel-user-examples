@@ -53,6 +53,8 @@ def source_path(root, name):
     # A symlink could publish a file from outside the repository.
     if path.resolve(strict=True) != path:
         raise ValueError(f"Sources must not be symlinks: {name}")
+    if not path.is_file():
+        raise ValueError(f"Sources must be regular files: {name}")
     return path
 
 

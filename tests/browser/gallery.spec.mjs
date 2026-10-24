@@ -28,7 +28,7 @@ test.beforeEach(async ({ context }) => {
   await stubExternal(context);
 });
 
-// Collects script errors and failed requests.
+// Collects script errors and HTTP error responses.
 function watch(page) {
   const problems = [];
   page.on('pageerror', (error) => problems.push(error.message));
@@ -116,7 +116,9 @@ for (const width of [320, 375, 768, 1280])
     expect(problems).toEqual([]);
   });
 
-test('numbered pages link to each other and label the range of their entries', async ({ page }) => {
+test('numbered pages link to each other, label their ranges, and display every preview', async ({
+  page,
+}) => {
   await page.goto(home);
   const pages = await page
     .locator('nav:not(.bottom-nav) > :not(.nav-arrow)')
@@ -139,6 +141,23 @@ test('numbered pages link to each other and label the range of their entries', a
     expect(label).toBe(`${ids[0]}-${ids.at(-1)}`);
     await expect(page.locator('a[rel="prev"]')).toHaveCount(index === 0 ? 0 : 2);
     await expect(page.locator('a[rel="next"]')).toHaveCount(index === pages.length - 1 ? 0 : 2);
+
+    const failedPreviews = await page.locator('.preview img').evaluateAll(async (images) => {
+      // Include offscreen lazy images, not just those in the initial viewport.
+      const results = await Promise.all(
+        images.map(async (image) => {
+          image.loading = 'eager';
+          try {
+            await image.decode();
+            return null;
+          } catch {
+            return new URL(image.src).pathname;
+          }
+        }),
+      );
+      return results.filter((path) => path !== null);
+    });
+    expect(failedPreviews, path).toEqual([]);
   }
 });
 

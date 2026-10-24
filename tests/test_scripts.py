@@ -232,6 +232,12 @@ class BuildTests(unittest.TestCase):
                 moved.rename(source)
 
     def test_build_checks_every_source_before_writing(self):
+        self.build()
+        before = {
+            path.relative_to(self.target): path.read_bytes()
+            for path in self.target.rglob("*")
+            if path.is_file()
+        }
         for name in (
             "examples.yml",
             "templates/page.html",
@@ -244,7 +250,19 @@ class BuildTests(unittest.TestCase):
                 source.unlink()
                 with self.assertRaises(FileNotFoundError):
                     self.build()
-                self.assertFalse(self.target.exists())
+
+                source.mkdir()
+                with self.assertRaisesRegex(ValueError, "regular files"):
+                    self.build()
+                self.assertEqual(
+                    {
+                        path.relative_to(self.target): path.read_bytes()
+                        for path in self.target.rglob("*")
+                        if path.is_file()
+                    },
+                    before,
+                )
+                source.rmdir()
                 source.write_bytes(content)
 
     def test_main_replaces_dist_and_keeps_it_after_a_failure(self):

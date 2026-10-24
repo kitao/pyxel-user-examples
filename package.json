@@ -16,5 +16,10 @@
     "@playwright/test": "1.63.0",
     "axe-core": "4.11.0",
     "wrangler": "4.150.0"
+  },
+  "overrides": {
+    "miniflare": {
+      "undici": "7.30.1"
+    }
   }
 }
