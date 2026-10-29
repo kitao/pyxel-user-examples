@@ -22,12 +22,20 @@ async function stubExternal(context) {
   await context.route('**/pyxel/assets/images/pyxel_icon_64x64.png', (route) =>
     route.fulfill({ contentType: 'image/png', body: iconStandIn }),
   );
-  await context.route(/^https:\/\/(img\.shields\.io|ko-fi\.com)\//, (route) =>
-    route.fulfill({
-      contentType: 'image/svg+xml',
-      body: '<svg xmlns="http://www.w3.org/2000/svg" width="149" height="20"><rect width="149" height="20" fill="white"/></svg>',
-    }),
-  );
+  // Representative badge widths preserve their different wrapping behavior.
+  for (const [url, width] of [
+    ['https://img.shields.io/github/stars/kitao/pyxel?*', 138],
+    ['https://img.shields.io/github/sponsors/kitao?*', 154],
+    ['https://img.shields.io/badge/Support%20on%20Patreon-000000?*', 143],
+    ['https://ko-fi.com/img/githubbutton_sm.svg', 149],
+  ]) {
+    await context.route(url, (route) =>
+      route.fulfill({
+        contentType: 'image/svg+xml',
+        body: `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20"><rect width="${width}" height="20" fill="white"/></svg>`,
+      }),
+    );
+  }
 }
 
 test.beforeEach(async ({ context }) => {
@@ -100,6 +108,19 @@ for (const width of [320, 375, 768, 1280])
     await page.goto(home);
     const layout = await page.evaluate(() => ({
       overflow: document.documentElement.scrollWidth > innerWidth,
+      navigation: [...document.querySelectorAll('nav')].map((nav) => {
+        const pages = nav.querySelector('.nav-pages').getBoundingClientRect();
+        const [previous, next] = [...nav.querySelectorAll('.nav-arrow')].map((arrow) =>
+          arrow.getBoundingClientRect(),
+        );
+        const center = pages.top + pages.height / 2;
+        return {
+          onEachSide: previous.right <= pages.left && next.left >= pages.right,
+          centered: [previous, next].every((arrow) =>
+            Math.abs(arrow.top + arrow.height / 2 - center) < 1,
+          ),
+        };
+      }),
       cards: [...document.querySelectorAll('.card')].map((card) => {
         const preview = card.querySelector('.preview img').getBoundingClientRect();
         const heading = card.querySelector('h2').getBoundingClientRect();
@@ -111,6 +132,7 @@ for (const width of [320, 375, 768, 1280])
       }),
     }));
     expect(layout.overflow).toBe(false);
+    expect(layout.navigation.every((nav) => nav.onEachSide && nav.centered)).toBe(true);
     expect(layout.cards).toHaveLength(18);
     expect(layout.cards.every((card) => card.previewFirst && card.square)).toBe(true);
     const columns = layout.cards.filter((card) => card.top === layout.cards[0].top).length;
@@ -127,7 +149,7 @@ test('numbered pages link to each other, label their ranges, and display every p
 }) => {
   await page.goto(home);
   const pages = await page
-    .locator('nav:not(.bottom-nav) > :not(.nav-arrow)')
+    .locator('nav:not(.bottom-nav) .nav-pages > *')
     .evaluateAll((items) => items.map((item) => ({ label: item.textContent, href: item.href })));
   for (const [index, { label, href }] of pages.entries()) {
     const path = index === 0 ? home : `${home}page/${index + 1}/`;

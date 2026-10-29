@@ -75,18 +75,29 @@ header p {
 }
 
 nav {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 28px;
+  align-items: center;
   gap: 8px;
   padding: 12px 0;
+}
+
+.nav-pages {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 6px;
 }
 
 nav a,
 nav span {
-  display: inline-block;
-  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 4px 8px;
   font-size: 0.8rem;
+  white-space: nowrap;
   border: 1px solid #30363d;
   border-radius: 4px;
 }
@@ -115,7 +126,7 @@ nav span {
 nav .nav-arrow {
   border: none;
   font-size: 1rem;
-  padding: 4px 6px;
+  padding: 4px 0;
 }
 
 nav .nav-arrow.disabled {
