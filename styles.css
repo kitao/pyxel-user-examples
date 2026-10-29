@@ -31,7 +31,7 @@ nav a:focus-visible::after {
 
 header {
   text-align: center;
-  padding: 24px 0;
+  padding: 24px 0 8px;
   border-bottom: 1px solid #30363d;
 }
 
@@ -51,6 +51,27 @@ header p a {
 header p {
   color: #8b949e;
   font-size: 0.875rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 8px;
+  margin-top: 16px;
+}
+
+.badges a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+}
+
+.badges img {
+  display: block;
+  width: auto;
+  height: 20px;
 }
 
 nav {

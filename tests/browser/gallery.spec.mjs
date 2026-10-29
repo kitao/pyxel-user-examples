@@ -9,8 +9,8 @@ const iconStandIn = Buffer.from(
 const fontStandIn =
   "@font-face { font-family: 'Noto Sans JP'; src: url(https://fonts.gstatic.com/s/stand-in.woff2) format('woff2'); }";
 
-// Google Fonts loads from the network and the Pyxel site provides the icon; stand-ins keep the
-// tests independent of both, and the text falls back to local fonts.
+// Fonts and badges load from the network and the Pyxel site provides the icon; stand-ins keep
+// the tests independent of those services, and the text falls back to local fonts.
 async function stubExternal(context) {
   // The stand-in stylesheet points at fonts.gstatic.com like the real one, so font-src is covered.
   await context.route(/^https:\/\/fonts\.googleapis\.com\//, (route) =>
@@ -21,6 +21,12 @@ async function stubExternal(context) {
   );
   await context.route('**/pyxel/assets/images/pyxel_icon_64x64.png', (route) =>
     route.fulfill({ contentType: 'image/png', body: iconStandIn }),
+  );
+  await context.route(/^https:\/\/(img\.shields\.io|ko-fi\.com)\//, (route) =>
+    route.fulfill({
+      contentType: 'image/svg+xml',
+      body: '<svg xmlns="http://www.w3.org/2000/svg" width="149" height="20"><rect width="149" height="20" fill="white"/></svg>',
+    }),
   );
 }
 

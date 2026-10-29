@@ -35,7 +35,7 @@ class PageParser(HTMLParser):
         self.urls.extend(attrs[key] for key in ("href", "src") if key in attrs)
         if tag == "link":
             self.links.append(attrs)
-        if tag == "img":
+        if tag == "img" and not urlsplit(attrs["src"]).scheme:
             self.previews.append(attrs)
 
 
