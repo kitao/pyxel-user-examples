@@ -35,7 +35,7 @@
 
 - id: 215
   title: PyCon JP 2026 Keynote Trailer
-  site: https://github.com/kitao/pyconjp2026-keynote
+  site: https://kitao.dev/pyconjp2026-keynote/
   author: Takashi Kitao
   contact: https://x.com/kitao
   desc: A trailer for the PyCon JP 2026 keynote featuring fireworks over the sea
@@ -63,7 +63,7 @@
 
 - id: 211
   title: RHYTHM GAME VS GIGI!
-  site: https://github.com/yukikingyoo/VSGIGI/blob/main/README.md
+  site: https://yukikingyoo.github.io/VSGIGI/
   author: yukikingyoo
   contact: https://github.com/yukikingyoo
   desc: A rhythm game with directional notes and long-press controls
@@ -175,7 +175,7 @@
 
 - id: 195
   title: GO FROG
-  site: https://github.com/okapping/GO_FROG
+  site: https://okapping.github.io/GO_FROG/
   author: okapping
   contact: https://x.com/app_okapping
   desc: A game where a frog swims forward
@@ -308,14 +308,14 @@
 
 - id: 176
   title: MANorBEAST
-  site: https://github.com/yukikingyoo/MANorBEAST
+  site: https://yukikingyoo.github.io/MANorBEAST/
   author: yukikingyoo
   contact: https://github.com/yukikingyoo
   desc: Real-time virtual pet fish game
 
 - id: 175
   title: Alien Evolution
-  site: https://github.com/alepoydes/alien-evolution-pyport
+  site: https://alepoydes.github.io/alien-evolution-pyport/play/
   author: Igor Lobanov
   contact: https://x.com/utilityunknown
   desc: Pyxel port of the ZX Spectrum game Alien Evolution
@@ -357,7 +357,7 @@
 
 - id: 169
   title: THE COLORS
-  site: https://github.com/Python-yarouze/the-colors
+  site: https://python-yarouze.github.io/the-colors/
   author: FulLine
   contact: https://x.com/ful_line
   desc: A color-changing puzzle action game
@@ -413,7 +413,7 @@
 
 - id: 161
   title: Pyxel Fighter jet Game
-  site: https://github.com/life-is-plastic/pyxel-fighter-jet-game
+  site: https://life-is-plastic.github.io/pyxel-fighter-jet-game/
   author: life-is-plastic
   contact: https://github.com/life-is-plastic
   desc: A top-down flying-and-shooting game
@@ -497,7 +497,7 @@
 
 - id: 149
   title: Graffiti Cleanup Rush
-  site: https://github.com/LeoI52/graffiti-cleanup-rush
+  site: https://leo-imbert.itch.io/graffiti-cleanup-rush
   author: Léo Imbert
   contact: https://github.com/LeoI52
   desc: A score-based arcade clicking game
@@ -525,7 +525,7 @@
 
 - id: 145
   title: Jump Jump Bouncing Ball
-  site: https://github.com/gomatama5/Jump_Jump_Bouncing_Ball
+  site: https://gomatama5.github.io/Jump_Jump_Bouncing_Ball/jjbb.html
   author: gomatama5
   contact: https://github.com/gomatama5
   desc: A jumping action game with a physics engine
@@ -588,7 +588,7 @@
 
 - id: 136
   title: Laser Jetman
-  site: https://github.com/helpcomputer/laser-jetman
+  site: https://badcomputer0.itch.io/laser-jetman
   author: Adam
   contact: https://x.com/badcomputer0
   desc: An arcade shoot-em-up
@@ -623,14 +623,14 @@
 
 - id: 131
   title: HadeGame
-  site: https://github.com/hnsol/pyxel-hadegame/
+  site: https://hnsol.github.io/pyxel-hadegame/pyxelhg.html
   author: hann-solo
   contact: https://x.com/_hnsol
   desc: A first-person 3D maze escape game
 
 - id: 130
   title: 3D Maze
-  site: https://github.com/Sanzentyo/3D_Maze
+  site: https://sanzentyo.github.io/3D_Maze/
   author: Sanzentyo
   contact: https://github.com/Sanzentyo
   desc: A first-person 3D maze escape game
@@ -754,14 +754,14 @@
 
 - id: 112
   title: Bubbles
-  site: https://github.com/helpcomputer/bubbles
+  site: https://helpcomputer.github.io/pyxel/bubbles/
   author: Adam
   contact: https://x.com/badcomputer0
   desc: An arcade action game
 
 - id: 111
   title: Sarananda
-  site: https://github.com/kadoyan/sarananda
+  site: https://kadoyan.github.io/sarananda/sarananda.html
   author: KADOYAN
   contact: https://x.com/kadoyan
   desc: An escape game set inside an unidentified star
@@ -782,7 +782,7 @@
 
 - id: 108
   title: Ticoban
-  site: https://github.com/son-link/ticoban-pyxel
+  site: https://son-link.github.io/ticoban-pyxel/
   author: Son Link
   contact: https://x.com/sonlink
   desc: A Sokoban clone
@@ -888,7 +888,7 @@
 
 - id: 92
   title: Vortexion
-  site: https://github.com/helpcomputer/vortexion
+  site: https://badcomputer0.itch.io/vortexion
   author: Adam
   contact: https://x.com/badcomputer0
   desc: A shoot-em-up
@@ -1071,7 +1071,7 @@
 
 - id: 65
   title: kektris
-  site: https://github.com/KonstantinKlepikov/kektris
+  site: https://konstantinklepikov.github.io/kektris/
   author: KonstantinKlepikov
   contact: https://github.com/KonstantinKlepikov
   desc: A four-quadrant Tetris game
@@ -1359,7 +1359,7 @@
 
 - id: 22
   title: Bansoko
-  site: https://github.com/kfurtak1024/bansoko
+  site: https://kfurtak1024.itch.io/bansoko
   author: Krzysztof Furtak
   contact: https://github.com/kfurtak1024
   desc: A space-themed Sokoban clone
