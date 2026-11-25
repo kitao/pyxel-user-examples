@@ -1,3 +1,10 @@
+- id: 222
+  title: DOTAN
+  site: https://kitao.dev/pyxel/launcher/?play=RusKRusK/dotan/main/dotan
+  author: RusK
+  contact: https://github.com/RusKRusK
+  desc: A strategy board game where you gather resources and build settlements on flat or spherical maps
+
 - id: 221
   title: ONE GLB EARTH
   site: https://codeandmagic.samurai-apps.com/works/one-glb-earth-globe-39001
