@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import re
+import sys
 
 import yaml
 from catalog import load_entries
@@ -56,7 +57,7 @@ def main():
     username = extract_x_username(entry.get("contact", ""))
     author = username if username else entry["author"]
 
-    print(TEMPLATE.format(title=entry["title"], author=author))
+    sys.stdout.write(TEMPLATE.format(title=entry["title"], author=author))
 
 
 if __name__ == "__main__":
