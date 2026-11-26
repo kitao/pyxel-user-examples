@@ -1,5 +1,8 @@
 {% set page = pages[index] %}
 {% macro page_href(target) %}{{ (root ~ target.dir) or "./" }}{% endmacro %}
+{% macro card_link(url, label, description) -%}
+<span class="card-link"><span class="separator" aria-hidden="true">|</span><a href="{{ url }}" target="_blank" rel="noopener" aria-label="{{ description }}">{{ label }}</a></span>
+{%- endmacro %}
 {% macro nav() %}
     {% if index > 0 %}
     <a href="{{ page_href(pages[index - 1]) }}" class="nav-arrow" aria-label="Previous page" rel="prev">◀</a>
@@ -79,7 +82,10 @@
       <div class="card-body">
         <h2>#{{ entry.id }} {{ entry.title }}</h2>
         <div class="meta">by {% if entry.contact is defined %}<a href="{{ entry.contact }}" target="_blank" rel="noopener">{{ entry.author }}</a>{% else %}{{ entry.author }}{% endif %}
-          {%- if entry.site is defined %}<span class="site-link"><span class="separator" aria-hidden="true">|</span><a href="{{ entry.site }}" target="_blank" rel="noopener" aria-label="Site for {{ entry.title }}">Site</a></span>{% endif %}</div>
+          {%- if entry.site is defined %}{{ card_link(entry.site, "Site", "Site for " ~ entry.title) }}{% endif %}
+          {%- if entry.play is defined %}
+            {{- card_link(entry.play, "Play📱" if entry.mobile | default(false) else "Play", "Play " ~ entry.title ~ (" on mobile or desktop" if entry.mobile | default(false) else "")) }}
+          {%- endif %}</div>
         <div class="desc">{{ entry.desc }}</div>
       </div>
     </div>

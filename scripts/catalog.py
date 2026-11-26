@@ -9,7 +9,8 @@ import yaml
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 REQUIRED_FIELDS = {"id", "title", "author", "desc"}
-OPTIONAL_FIELDS = {"site", "contact"}
+URL_FIELDS = {"play", "site", "contact"}
+OPTIONAL_FIELDS = URL_FIELDS | {"mobile"}
 
 
 class CatalogLoader(yaml.SafeLoader):
@@ -63,8 +64,14 @@ def load_entries(root=ROOT_DIR):
             raise ValueError(f"Entry #{entry_id}: IDs must be unique and descending")
         previous_id = entry_id
 
+        if "mobile" in entry:
+            if not isinstance(entry["mobile"], bool):
+                raise ValueError(f"Entry #{entry_id}: mobile must be a boolean")
+            if "play" not in entry:
+                raise ValueError(f"Entry #{entry_id}: mobile requires a play URL")
+
         for field, value in entry.items():
-            if field == "id":
+            if field in {"id", "mobile"}:
                 continue
             if (
                 not isinstance(value, str)
@@ -80,7 +87,7 @@ def load_entries(root=ROOT_DIR):
                     f"Entry #{entry_id}: {field} must be nonempty, "
                     "single-line text without surrounding whitespace"
                 )
-            if field in OPTIONAL_FIELDS:
+            if field in URL_FIELDS:
                 if any(char.isspace() for char in value):
                     raise ValueError(f"Entry #{entry_id}: {field} contains whitespace")
                 validate_url(value, field, entry_id)

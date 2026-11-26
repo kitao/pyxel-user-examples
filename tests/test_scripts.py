@@ -108,6 +108,9 @@ class BuildTests(unittest.TestCase):
             ([dict(entry, site="javascript:alert(1)")], r"HTTP\(S\) URL$"),
             ([dict(entry, site="https://")], r"HTTP\(S\) URL$"),
             ([dict(entry, site="https://example.com/bad url")], "whitespace"),
+            ([dict(entry, play="mailto:author@example.com")], r"HTTP\(S\) URL$"),
+            ([dict(entry, play="https://example.com", mobile="yes")], "boolean"),
+            ([dict(entry, mobile=True)], "requires a play URL"),
             ([dict(entry, contact="invalid")], "or mailto link"),
             ([dict(entry, contact="mailto:author")], "or mailto link"),
         ]
@@ -321,6 +324,25 @@ class BuildTests(unittest.TestCase):
         self.assertIn("&lt;b&gt;&#34;A&amp;B&#34;&lt;/b&gt; {{ root }} {% raw %}", html)
         self.assertNotIn("<b>", html)
         self.assertIn('href="https://example.com/?a=1&amp;b=2"', html)
+
+    def test_play_and_site_links_are_independent(self):
+        play = "https://example.org/play"
+        site = "https://example.org/about"
+        for fields, links in [
+            ({}, []),
+            ({"site": site}, [("Site", site)]),
+            ({"play": play}, [("Play", play)]),
+            ({"play": play, "mobile": False, "site": site}, [("Site", site), ("Play", play)]),
+            ({"play": play, "mobile": True, "site": play}, [("Site", play), ("Play📱", play)]),
+        ]:
+            with self.subTest(fields=fields):
+                self.write_catalog([dict(self.entries[0], **fields)])
+                page = self.build()["index.html"]
+                meta = page.split('<div class="meta">', 1)[1].split("</div>", 1)[0]
+                self.assertEqual(meta.count("<a "), len(links))
+                for label, url in links:
+                    anchor, meta = meta.split(f">{label}</a>", 1)
+                    self.assertIn(f'href="{url}"', anchor)
 
     def test_catalog_and_all_generated_local_links(self):
         entries = load_entries()

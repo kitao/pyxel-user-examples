@@ -1,19 +1,24 @@
 - id: 223
   title: PICO MUSOU
-  site: https://amix-design.com/tl/tool-g-musou/
+  play: https://amix-design.com/tl/tool-g-musou/
+  mobile: true
+  site: https://amix-design.com/tl/tool-g-musou/about.html
   author: トミナガハルキ
   contact: https://amix-design.com/tominaga/
   desc: A four-stage beat 'em up with sword and bow fighters
 
 - id: 222
   title: DOTAN
-  site: https://kitao.dev/pyxel/launcher/?play=RusKRusK/dotan/main/dotan
+  play: https://kitao.dev/pyxel/launcher/?play=RusKRusK/dotan/main/dotan&gamepad=enabled
+  site: https://github.com/RusKRusK/dotan
   author: RusK
   contact: https://github.com/RusKRusK
   desc: A strategy board game where you gather resources and build settlements on flat or spherical maps
 
 - id: 221
   title: ONE GLB EARTH
+  play: https://codeandmagic.samurai-apps.com/works/one-glb-earth-globe-39001
+  mobile: true
   site: https://codeandmagic.samurai-apps.com/works/one-glb-earth-globe-39001
   author: haruka_apps
   contact: https://x.com/haruka_apps
@@ -21,6 +26,7 @@
 
 - id: 220
   title: Fanteatral
+  play: https://chet-laboratory-fun.itch.io/fanteatral
   site: https://chet-laboratory-fun.itch.io/fanteatral
   author: A.E. Chet Herr
   contact: mailto:ae.chet.herr@gmail.com
@@ -35,6 +41,7 @@
 
 - id: 218
   title: TOKYO AFTERLIGHT
+  play: https://codeandmagic.samurai-apps.com/works/tokyo-afterlight-train-journey-62893
   site: https://codeandmagic.samurai-apps.com/works/tokyo-afterlight-train-journey-62893
   author: haruka_apps
   contact: https://x.com/haruka_apps
@@ -42,7 +49,9 @@
 
 - id: 217
   title: LANCERS / RANKERS
-  site: https://jirodasu.github.io/lancers-rankers-demo/
+  play: https://jirodasu.github.io/lancers-rankers-demo/
+  mobile: true
+  site: https://github.com/jirodasu/lancers-rankers-demo
   author: jirodasu
   contact: https://github.com/jirodasu
   desc: A spear action game with boss battles, dodges, and charged thrusts
@@ -56,6 +65,7 @@
 
 - id: 215
   title: PyCon JP 2026 Keynote Trailer
+  play: https://kitao.dev/pyxel/launcher/?play=kitao/pyconjp2026-keynote/main/trailer/trailer
   site: https://kitao.dev/pyconjp2026-keynote/
   author: Takashi Kitao
   contact: https://x.com/kitao
@@ -63,34 +73,41 @@
 
 - id: 214
   title: Moon Legend
-  site: https://mit-mit-randomprojectlab.github.io/pyweek41/moon_legend.html
+  play: https://mit-mit-randomprojectlab.github.io/pyweek41/moon_legend.html
+  site: https://pyweek.org/e/mit-mit-41/
   author: mit-mit
   contact: https://github.com/mit-mit-randomprojectlab
   desc: An adventure where you summon day and night to rescue the moon
 
 - id: 213
   title: Scuffy
-  site: https://mit-mit-randomprojectlab.github.io/pyweek39/scuffy.html
+  play: https://mit-mit-randomprojectlab.github.io/pyweek39/scuffy.html
+  site: https://pyweek.org/e/mit-mit-39/
   author: mit-mit
   contact: https://github.com/mit-mit-randomprojectlab
   desc: A metroidvania based on the classic children's book "Scuffy the Tugboat"
 
 - id: 212
   title: Electron
-  site: https://mit-mit-randomprojectlab.github.io/pyweek37/electron_pyweek37.html
+  play: https://mit-mit-randomprojectlab.github.io/pyweek37/electron_pyweek37.html
+  site: https://pyweek.org/e/mit-mit-37/
   author: mit-mit
   contact: https://github.com/mit-mit-randomprojectlab
   desc: A game where you play as an electron inside an old television's cathode-ray tube
 
 - id: 211
   title: RHYTHM GAME VS GIGI!
-  site: https://yukikingyoo.github.io/VSGIGI/
+  play: https://yukikingyoo.github.io/VSGIGI/
+  mobile: true
+  site: https://github.com/yukikingyoo/VSGIGI
   author: yukikingyoo
   contact: https://github.com/yukikingyoo
   desc: A rhythm game with directional notes and long-press controls
 
 - id: 210
   title: Dark Ruins
+  play: https://koidemizu.github.io/game/command/command.html
+  mobile: true
   site: https://koidemizu.github.io/post/command-rpg/
   author: koidemizu
   contact: https://github.com/koidemizu
@@ -98,6 +115,7 @@
 
 - id: 209
   title: Pixel Flight Simulator
+  play: https://kitao.dev/pyxel/launcher/?run=game-de-it/pixel-flight-simulator/main/main
   site: https://github.com/game-de-it/pixel-flight-simulator
   author: moto
   contact: https://x.com/0_game_it
@@ -105,27 +123,34 @@
 
 - id: 208
   title: Tunnel Dodge
-  site: https://kitao.dev/pyxel/code-maker/?github=sdkfz181tiger/Zenn/a4ce8d12cc565e5cf915f6103d9d1375854c07b3/images/books/675e49a3e4d34b/pce/flappy
+  play: https://kitao.dev/pyxel/launcher/?run=sdkfz181tiger/Zenn/a4ce8d12cc565e5cf915f6103d9d1375854c07b3/images/books/675e49a3e4d34b/pce/flappy/main
+  site: https://dev.to/sdkfz181tiger/getting-started-with-2d-games-using-pyxel-part-14-tunnel-dodge-game-sample-c0
   author: Kajiru
   contact: mailto:sdkfz181tiger@gmail.com
   desc: A Flappy Bird-style one-button game where you weave through tunnels
 
 - id: 207
   title: CLIFF JUMP
-  site: https://amix-design.com/tl/tool-g-cliff/
+  play: https://amix-design.com/tl/tool-g-cliff/
+  mobile: true
+  site: https://amix-design.com/tl/tool-g-cliff/about.html
   author: トミナガハルキ
   contact: https://amix-design.com/tominaga/
   desc: A one-button wall-jumping game where you climb to escape rising lava
 
 - id: 206
   title: SAURUS SCOPE
-  site: https://amix-design.com/tl/tool-g-saurus/
+  play: https://amix-design.com/tl/tool-g-saurus/
+  mobile: true
+  site: https://amix-design.com/tl/tool-g-saurus/about.html
   author: トミナガハルキ
   contact: https://amix-design.com/tominaga/
   desc: A dinosaur sniper game with breath control and three stages
 
 - id: 205
   title: Portal
+  play: https://codeandmagic.samurai-apps.com/works/portal-homage-83556
+  mobile: true
   site: https://codeandmagic.samurai-apps.com/works/portal-homage-83556
   author: haruka_apps
   contact: https://x.com/haruka_apps
@@ -133,6 +158,8 @@
 
 - id: 204
   title: Lumberjack Run
+  play: https://terrasima.itch.io/lumberjack-run
+  mobile: true
   site: https://terrasima.itch.io/lumberjack-run
   author: terrasima
   contact: https://x.com/terrasima
@@ -140,6 +167,7 @@
 
 - id: 203
   title: LAU:DIVE WITH
+  play: https://5hh1.itch.io/laudive-with
   site: https://5hh1.itch.io/laudive-with
   author: 5hh1
   contact: https://x.com/5_h_h_1
@@ -161,6 +189,7 @@
 
 - id: 200
   title: Second Reality TECHNO Scene
+  play: https://codeandmagic.samurai-apps.com/works/second-reality-pyxel-remake-42165
   site: https://codeandmagic.samurai-apps.com/works/second-reality-pyxel-remake-42165
   author: ムンペイ
   contact: https://x.com/munepi
@@ -168,6 +197,7 @@
 
 - id: 199
   title: QR Snake Game
+  play: https://codeandmagic.samurai-apps.com/works/qr-snake-game-72877
   site: https://codeandmagic.samurai-apps.com/works/qr-snake-game-72877
   author: haruka_apps
   contact: https://x.com/haruka_apps
@@ -182,6 +212,7 @@
 
 - id: 197
   title: Cyber Globe Earth
+  play: https://codeandmagic.samurai-apps.com/works/cyber-globe-earth-96042
   site: https://codeandmagic.samurai-apps.com/works/cyber-globe-earth-96042
   author: haruka_apps
   contact: https://x.com/haruka_apps
@@ -189,20 +220,24 @@
 
 - id: 196
   title: Firework Observer
-  site: https://sejiseji.github.io/firework-observer/
+  play: https://sejiseji.github.io/firework-observer/
+  site: https://github.com/sejiseji/firework-observer
   author: seji
   contact: https://x.com/sejiijes
   desc: Observe fireworks bloom inside a tiny wireframe night city
 
 - id: 195
   title: GO FROG
-  site: https://okapping.github.io/GO_FROG/
+  play: https://kitao.dev/pyxel/launcher/?play=okapping/GO_FROG/main/docs/GO_FROG
+  mobile: true
+  site: https://github.com/okapping/GO_FROG
   author: okapping
   contact: https://x.com/app_okapping
   desc: A game where a frog swims forward
 
 - id: 194
   title: Megademo Copper Bar Scene
+  play: https://codeandmagic.samurai-apps.com/works/retro-megademo-scene-52693
   site: https://codeandmagic.samurai-apps.com/works/retro-megademo-scene-52693
   author: ムンペイ
   contact: https://x.com/munepi
@@ -217,13 +252,17 @@
 
 - id: 192
   title: Hanafuda Drop
-  site: https://ninja-cop.github.io/Hanafuda-Drop/
+  play: https://ninja-cop.github.io/Hanafuda-Drop/
+  mobile: true
+  site: https://github.com/ninja-cop/Hanafuda-Drop
   author: saizo
   contact: https://x.com/Saizo_KOGAKURE
   desc: A puzzle action game
 
 - id: 191
   title: AmericanDreams
+  play: https://spsoft.server-on.net/webgames/games/AmericanDreams.html
+  mobile: true
   site: https://spsoft.server-on.net/webgames/AmericanDreams.html
   author: Takeshi Maeda (SPSoft)
   contact: https://spsoft.server-on.net
@@ -231,6 +270,7 @@
 
 - id: 190
   title: Megademo Plasma Scene
+  play: https://codeandmagic.samurai-apps.com/works/megademo-plasma-scene-21664
   site: https://codeandmagic.samurai-apps.com/works/megademo-plasma-scene-21664
   author: ムンペイ
   contact: https://x.com/munepi
@@ -238,7 +278,9 @@
 
 - id: 189
   title: Tetris
-  site: https://ninja-cop.github.io/Tetris/
+  play: https://ninja-cop.github.io/Tetris/
+  mobile: true
+  site: https://github.com/ninja-cop/Tetris
   author: saizo
   contact: https://x.com/Saizo_KOGAKURE
   desc: A Tetris game
@@ -259,14 +301,18 @@
 
 - id: 186
   title: Hanafuda Spider Solitaire
-  site: https://ninja-cop.github.io/Hanafuda-SpiderSolitaire/
+  play: https://ninja-cop.github.io/Hanafuda-SpiderSolitaire/
+  mobile: true
+  site: https://github.com/ninja-cop/Hanafuda-SpiderSolitaire
   author: saizo
   contact: https://x.com/Saizo_KOGAKURE
   desc: Spider solitaire with Hanafuda cards
 
 - id: 185
   title: Hanafuda Freecell
-  site: https://ninja-cop.github.io/Hanafuda-Freecell/
+  play: https://ninja-cop.github.io/Hanafuda-Freecell/
+  mobile: true
+  site: https://github.com/ninja-cop/Hanafuda-Freecell
   author: saizo
   contact: https://x.com/Saizo_KOGAKURE
   desc: FreeCell solitaire with Hanafuda cards
@@ -280,48 +326,58 @@
 
 - id: 183
   title: SKY BOX
-  site: https://github.com/mekatama/01_SkyTama
+  site: https://github.com/kitao/pyxel/discussions/698
   author: tamatte
   contact: https://github.com/mekatama
   desc: A side-scrolling shoot-em-up inspired by Sky Kid
 
 - id: 182
   title: Alpha Rogue Royal
-  site: https://yusei-games.github.io/AlphaRogueRoyal/
+  play: https://kitao.dev/pyxel/launcher/?play=yusei-games/AlphaRogueRoyal/main/alpha-rogue-royal
+  site: https://github.com/yusei-games/AlphaRogueRoyal
   author: terrasima
   contact: https://x.com/terrasima
   desc: A simple RPG that can be completed in 10 minutes
 
 - id: 181
   title: Knight of the Calculator
-  site: https://ninja-cop.github.io/Knight-of-the-calculator/
+  play: https://ninja-cop.github.io/Knight-of-the-calculator/
+  mobile: true
+  site: https://github.com/ninja-cop/Knight-of-the-calculator
   author: saizo
   contact: https://x.com/Saizo_KOGAKURE
   desc: Arithmetic battle action game
 
 - id: 180
   title: Hanafuda Montecarlo
-  site: https://ninja-cop.github.io/Hanafuda-Montecarlo/
+  play: https://ninja-cop.github.io/Hanafuda-Montecarlo/
+  mobile: true
+  site: https://github.com/ninja-cop/Hanafuda-Montecarlo
   author: saizo
   contact: https://x.com/Saizo_KOGAKURE
   desc: Hanafuda solitaire using Monte Carlo rules
 
 - id: 179
   title: Hanafuda Koikoi
-  site: https://ninja-cop.github.io/Hanafuda-Koikoi/
+  play: https://ninja-cop.github.io/Hanafuda-Koikoi/
+  mobile: true
+  site: https://github.com/ninja-cop/Hanafuda-Koikoi
   author: saizo
   contact: https://x.com/Saizo_KOGAKURE
   desc: Traditional Japanese push-your-luck card game
 
 - id: 178
   title: Hanafuda Solitaire
-  site: https://ninja-cop.github.io/Hanafuda-Solitaire/
+  play: https://ninja-cop.github.io/Hanafuda-Solitaire/
+  mobile: true
+  site: https://github.com/ninja-cop/Hanafuda-Solitaire
   author: saizo
   contact: https://x.com/Saizo_KOGAKURE
   desc: Standard Klondike solitaire with Hanafuda cards
 
 - id: 177
   title: Kudamono Merge
+  play: https://takeshic.itch.io/kudamono-merge
   site: https://takeshic.itch.io/kudamono-merge
   author: Takeshich NAKAMURA
   contact: https://github.com/takeshich
@@ -329,20 +385,24 @@
 
 - id: 176
   title: MANorBEAST
-  site: https://yukikingyoo.github.io/MANorBEAST/
+  play: https://yukikingyoo.github.io/MANorBEAST/
+  mobile: true
+  site: https://github.com/yukikingyoo/MANorBEAST
   author: yukikingyoo
   contact: https://github.com/yukikingyoo
   desc: Real-time virtual pet fish game
 
 - id: 175
   title: Alien Evolution
-  site: https://alepoydes.github.io/alien-evolution-pyport/play/
+  play: https://alepoydes.github.io/alien-evolution-pyport/play/
+  site: https://github.com/alepoydes/alien-evolution-pyport
   author: Igor Lobanov
   contact: https://x.com/utilityunknown
   desc: Pyxel port of the ZX Spectrum game Alien Evolution
 
 - id: 174
   title: Hover Racer
+  play: https://haruka-apps-games.itch.io/hover-racer
   site: https://haruka-apps-games.itch.io/hover-racer
   author: haruka_apps
   contact: https://x.com/haruka_apps
@@ -350,13 +410,16 @@
 
 - id: 173
   title: Pyxel Tempest
-  site: https://sanbunnoichi1962.web.fc2.com/pyxel/tempest.html
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/tempest.html
+  site: https://github.com/kitao/pyxel/issues/639#issuecomment-3901359123
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
   desc: Atari Tempest-like game
 
 - id: 172
   title: Fikuś
+  play: https://fikus.cloudbuster.pl/mobile/
+  mobile: true
   site: https://fikus.cloudbuster.pl/
   author: Cloudbuster
   contact: https://cloudbuster.pl/
@@ -364,13 +427,15 @@
 
 - id: 171
   title: Pyxel Pacman
-  site: https://sanbunnoichi1962.web.fc2.com/pyxel/pyxelpac.html
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/pyxelpac.html
+  site: https://github.com/kitao/pyxel/issues/639#issuecomment-3803121200
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
   desc: Pac-Man-like game
 
 - id: 170
   title: Falling Sand
+  play: https://kitao.dev/pyxel/launcher/?play=5h00T/FallingSand/main/app/main
   site: https://github.com/5h00T/FallingSand/
   author: shoot.er
   contact: https://x.com/m4_sd
@@ -378,42 +443,52 @@
 
 - id: 169
   title: THE COLORS
-  site: https://python-yarouze.github.io/the-colors/
+  play: https://kitao.dev/pyxel/launcher/?play=python-yarouze/the-colors/main/the-colors-development&packages=pygame-ce&gamepad=enabled
+  mobile: true
+  site: https://github.com/python-yarouze/the-colors
   author: FulLine
   contact: https://x.com/ful_line
   desc: A color-changing puzzle action game
 
 - id: 168
   title: Cursed Caverns
-  site: https://kitao.dev/pyxel/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.cursed_caverns&gamepad=enabled
+  play: https://kitao.dev/pyxel/launcher/?play=kitao/pyxel/main/python/pyxel/examples/apps/cursed_caverns&gamepad=enabled
+  mobile: true
+  site: https://gihyo.jp/book/2025/978-4-297-14657-3
   author: Takashi Kitao
   contact: https://x.com/kitao
   desc: A platformer from the Pyxel Official Book
 
 - id: 167
   title: Mega Wing
-  site: https://kitao.dev/pyxel/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.mega_wing&gamepad=enabled
+  play: https://kitao.dev/pyxel/launcher/?play=kitao/pyxel/main/python/pyxel/examples/apps/mega_wing&gamepad=enabled
+  mobile: true
+  site: https://gihyo.jp/book/2025/978-4-297-14657-3
   author: Takashi Kitao
   contact: https://x.com/kitao
   desc: A shoot-em-up from the Pyxel Official Book
 
 - id: 166
   title: Space Rescue
-  site: https://kitao.dev/pyxel/launcher/?play=kitao.pyxel.python.pyxel.examples.apps.space_rescue&gamepad=enabled
+  play: https://kitao.dev/pyxel/launcher/?play=kitao/pyxel/main/python/pyxel/examples/apps/space_rescue&gamepad=enabled
+  mobile: true
+  site: https://gihyo.jp/book/2025/978-4-297-14657-3
   author: Takashi Kitao
   contact: https://x.com/kitao
   desc: A one-button rescue game from the Pyxel Official Book
 
 - id: 165
   title: Mini Metroid
-  site: https://aged99oow.github.io/metroid/
+  play: https://kitao.dev/pyxel/launcher/?play=aged99oow/metroid/main/MiniMetroid&gamepad=enabled
+  mobile: true
+  site: https://github.com/aged99oow/metroid
   author: aged99oow
   contact: https://x.com/aged99
   desc: A reduced version of NES Metroid
 
 - id: 164
   title: Lama
-  site: https://aged99oow.github.io/lama/
+  site: https://github.com/aged99oow/lama
   author: aged99oow
   contact: https://x.com/aged99
   desc: A card game where you shed or fold for minimum points
@@ -427,6 +502,7 @@
 
 - id: 162
   title: Old ARPG like
+  play: https://kitao.dev/pyxel/launcher/?play=ronegray/OldARPGlike/main/main&gamepad=enabled
   site: https://github.com/ronegray/OldARPGlike/tree/main
   author: MoQ
   contact: https://github.com/ronegray
@@ -434,20 +510,24 @@
 
 - id: 161
   title: Pyxel Fighter jet Game
-  site: https://life-is-plastic.github.io/pyxel-fighter-jet-game/
+  play: https://kitao.dev/pyxel/launcher/?play=life-is-plastic/pyxel-fighter-jet-game/main/docs/game
+  site: https://github.com/life-is-plastic/pyxel-fighter-jet-game
   author: life-is-plastic
   contact: https://github.com/life-is-plastic
   desc: A top-down flying-and-shooting game
 
 - id: 160
   title: "Looking for Kiara-chan!"
-  site: https://game.kiasaga.love/
+  play: https://kitao.dev/pyxel/launcher/?play=kikutaro/Pyxel_RPG_Looking_For_Kiara-Chan/main/equal_maika&gamepad=enabled
+  mobile: true
+  site: https://www.kiasaga.love/
   author: Kikutaro
   contact: https://x.com/kikutaro_
   desc: A mystery-solving mini-RPG
 
 - id: 159
   title: Game of Pyxels
+  play: https://kitao.dev/pyxel/launcher/?play=LeoI52/game-of-pyxels/main/build/game-of-pyxels
   site: https://leo-imbert.itch.io/game-of-pyxels
   author: Léo Imbert
   contact: https://github.com/LeoI52
@@ -455,13 +535,15 @@
 
 - id: 158
   title: "Queue It !"
-  site: https://leo-imbert.itch.io/queue-it
+  play: https://leo-imbert.itch.io/queue-it
+  site: https://github.com/LeoI52/queue-it
   author: Léo Imbert
   contact: https://github.com/LeoI52
   desc: A fast-paced puzzle-platformer
 
 - id: 157
   title: PyxelTD
+  play: https://kitao.dev/pyxel/launcher/?play=5h00T/PyxelTD/main/app/pyxeltd
   site: https://github.com/5h00T/PyxelTD
   author: shoot.er
   contact: https://x.com/m4_sd
@@ -469,6 +551,7 @@
 
 - id: 156
   title: Loop Shot
+  play: https://kitao.dev/pyxel/launcher/?play=LeoI52/loop-shot/main/build/loop%20shot
   site: https://leo-imbert.itch.io/loop-shot
   author: Léo Imbert
   contact: https://github.com/LeoI52
@@ -476,6 +559,8 @@
 
 - id: 155
   title: Hanafuda Pon
+  play: https://ninja-cop.github.io/Hanafuda-Pon/
+  mobile: true
   site: https://github.com/ninja-cop/Hanafuda-Pon
   author: saizo
   contact: https://github.com/ninja-cop
@@ -483,6 +568,8 @@
 
 - id: 154
   title: Towercraft
+  play: https://son-link.github.io/games/towercraft/
+  mobile: true
   site: https://codeberg.org/son_link/Towercraft
   author: Son Link
   contact: https://x.com/sonlink
@@ -497,6 +584,8 @@
 
 - id: 152
   title: Hanafuda Tetris
+  play: https://ninja-cop.github.io/Hanafuda-Tetris/
+  mobile: true
   site: https://github.com/ninja-cop/Hanafuda-Tetris
   author: saizo
   contact: https://github.com/ninja-cop
@@ -504,13 +593,16 @@
 
 - id: 151
   title: 'FAKE DOGMENTARY "Q"'
-  site: https://hotatecurry.github.io/fakedogmentaryq/fakedog.html
+  play: https://hotatecurry.github.io/fakedogmentaryq/fakedog.html
+  mobile: true
+  site: https://github.com/hotatecurry/fakedogmentaryq
   author: hotate_curry
   contact: https://x.com/hotate__curry
   desc: A Souls-like animal welfare action game
 
 - id: 150
   title: Breakout
+  play: https://kitao.dev/pyxel/launcher/?play=jay-kumogata/PyxelChip8/main/pyxel/breakout/breakout
   site: https://github.com/jay-kumogata/PyxelChip8/tree/main/pyxel/breakout
   author: Jay Kumogata
   contact: https://x.com/jay_kumogata
@@ -518,13 +610,16 @@
 
 - id: 149
   title: Graffiti Cleanup Rush
-  site: https://leo-imbert.itch.io/graffiti-cleanup-rush
+  play: https://leo-imbert.itch.io/graffiti-cleanup-rush
+  mobile: true
+  site: https://github.com/LeoI52/graffiti-cleanup-rush
   author: Léo Imbert
   contact: https://github.com/LeoI52
   desc: A score-based arcade clicking game
 
 - id: 148
   title: Mastermind
+  play: https://kitao.dev/pyxel/launcher/?play=jay-kumogata/PyxelChip8/main/pyxel/mastermind/mastermind&packages=numpy
   site: https://github.com/jay-kumogata/PyxelChip8/tree/main/pyxel/mastermind
   author: Jay Kumogata
   contact: https://x.com/jay_kumogata
@@ -532,6 +627,8 @@
 
 - id: 147
   title: popstar
+  play: https://kitao.dev/pyxel/launcher/?run=c-hui/popstar/main/popstar
+  mobile: true
   site: https://github.com/c-hui/popstar
   author: shichunhui
   contact: mailto:mrshich@foxmail.com
@@ -546,13 +643,16 @@
 
 - id: 145
   title: Jump Jump Bouncing Ball
-  site: https://gomatama5.github.io/Jump_Jump_Bouncing_Ball/jjbb.html
+  play: https://gomatama5.github.io/Jump_Jump_Bouncing_Ball/jjbb.html
+  site: https://github.com/gomatama5/Jump_Jump_Bouncing_Ball
   author: gomatama5
   contact: https://github.com/gomatama5
   desc: A jumping action game with a physics engine
 
 - id: 144
   title: Number Link
+  play: https://kitao.dev/pyxel/launcher/?play=ku-ron/pyxel_minigames/main/main/numberlink/numberlink_v3_0&gamepad=enabled
+  mobile: true
   site: https://github.com/ku-ron/pyxel_minigames/blob/main/main/numberlink/readme.md
   author: ku-ron
   contact: https://github.com/ku-ron
@@ -560,6 +660,8 @@
 
 - id: 143
   title: "Gem'X Pyxel Clone"
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/gemx.html
+  mobile: true
   site: https://sanbunnoichi1962.web.fc2.com/pyxel_contents.html#gemx
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
@@ -567,13 +669,14 @@
 
 - id: 142
   title: "L'Épopée Pixellisée"
-  site: https://www.pyxelstudio.net/cf2apb4z
+  site: https://github.com/kitao/pyxel/issues/609#issuecomment-2706271105
   author: Lamorkitu93
   contact: https://github.com/Lamorkitu93
   desc: A platformer
 
 - id: 141
   title: Stalker Bar
+  play: https://sitf.itch.io/stalkerbar
   site: https://sitf.itch.io/stalkerbar
   author: s1tf
   contact: https://github.com/s1tf
@@ -581,6 +684,8 @@
 
 - id: 140
   title: Mahjong Solitaire
+  play: https://kitao.dev/pyxel/launcher/?play=BouKiCHi/mahjong/main/pyxapp/web01
+  mobile: true
   site: https://github.com/BouKiCHi/mahjong
   author: BouKiCHi
   contact: https://x.com/boukichi_numloc
@@ -588,6 +693,7 @@
 
 - id: 139
   title: Asteroids
+  play: https://kitao.dev/pyxel/launcher/?run=jay-kumogata/RetroGames/main/pyxel/asteroids/Asteroids
   site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/asteroids
   author: Jay Kumogata
   contact: https://x.com/jay_kumogata
@@ -595,6 +701,8 @@
 
 - id: 138
   title: "Seagull's Fishing"
+  play: https://stone-dot.itch.io/seagulls-fishing
+  mobile: true
   site: https://stone-dot.itch.io/seagulls-fishing
   author: こいし
   contact: https://x.com/koishi_dot
@@ -602,6 +710,7 @@
 
 - id: 137
   title: Typing Practice
+  play: https://kitao.dev/pyxel/launcher/?run=samurai-apps/pyxel-games/main/src/91_typing_practice
   site: https://github.com/samurai-apps/pyxel-games/blob/main/src/91_typing_practice.py
   author: SamuraiApps
   contact: https://x.com/samuraiapps
@@ -609,13 +718,17 @@
 
 - id: 136
   title: Laser Jetman
-  site: https://badcomputer0.itch.io/laser-jetman
+  play: https://kitao.dev/pyxel/launcher/?play=kitao/pyxel/main/python/pyxel/examples/apps/laser-jetman&gamepad=enabled
+  mobile: true
+  site: https://github.com/helpcomputer/laser-jetman
   author: Adam
   contact: https://x.com/badcomputer0
   desc: An arcade shoot-em-up
 
 - id: 135
   title: Rocket Flight
+  play: https://kitao.dev/pyxel/launcher/?play=nadi726/Rocket-Flight/master/dist/rocket-flight
+  mobile: true
   site: https://github.com/nadi726/Rocket-Flight
   author: nadi726
   contact: https://github.com/nadi726
@@ -623,6 +736,8 @@
 
 - id: 134
   title: EntroPipes
+  play: https://son-link.itch.io/entropipes
+  mobile: true
   site: https://codeberg.org/son_link/EntroPipes
   author: Son Link
   contact: https://x.com/sonlink
@@ -630,13 +745,16 @@
 
 - id: 133
   title: Tapping Freecell
-  site: https://tiquer17.github.io/pyxel/freecell/
+  play: https://tiquer17.github.io/pyxel/freecell/
+  mobile: true
+  site: https://github.com/tiquer17/pyxel/tree/main/freecell
   author: tiquer17
   contact: https://github.com/tiquer17
   desc: A FreeCell game with touch controls
 
 - id: 132
   title: AutoRace
+  play: https://kitao.dev/pyxel/launcher/?run=jay-kumogata/RetroGames/main/pyxel/autorace/autorace&packages=numpy
   site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/autorace
   author: Jay Kumogata
   contact: https://x.com/jay_kumogata
@@ -644,14 +762,17 @@
 
 - id: 131
   title: HadeGame
-  site: https://hnsol.github.io/pyxel-hadegame/pyxelhg.html
+  play: https://kitao.dev/pyxel/launcher/?play=hnsol/pyxel-hadegame/main/pyxelhg
+  mobile: true
+  site: https://github.com/hnsol/pyxel-hadegame
   author: hann-solo
   contact: https://x.com/_hnsol
   desc: A first-person 3D maze escape game
 
 - id: 130
   title: 3D Maze
-  site: https://sanzentyo.github.io/3D_Maze/
+  play: https://sanzentyo.github.io/3D_Maze/
+  site: https://github.com/sanzentyo/3D_Maze
   author: Sanzentyo
   contact: https://github.com/Sanzentyo
   desc: A first-person 3D maze escape game
@@ -665,6 +786,8 @@
 
 - id: 128
   title: pymunk_de_smartball
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/pds.html
+  mobile: true
   site: https://sanbunno-ichi.github.io/pymunk_de_smartball/
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
@@ -672,6 +795,7 @@
 
 - id: 127
   title: minesweeper
+  play: https://kitao.dev/pyxel/launcher/?run=tiquer17/pyxel/main/minesweeper/minesweeper
   site: https://github.com/tiquer17/pyxel/tree/main/minesweeper
   author: tiquer17
   contact: https://github.com/tiquer17
@@ -686,6 +810,8 @@
 
 - id: 125
   title: "Gamaguchi's Munch Panic"
+  play: https://kitao.dev/pyxel/launcher/?play=naoto714714/pyxel-mogumogu-panic/main/app&gamepad=enabled
+  mobile: true
   site: https://github.com/naoto714714/pyxel-mogumogu-panic
   author: naoto
   contact: https://github.com/naoto714714
@@ -693,6 +819,7 @@
 
 - id: 124
   title: Pyxel2D
+  play: https://kitao.dev/pyxel/launcher/?run=jay-kumogata/Pyxel2D/main/Demo
   site: https://github.com/jay-kumogata/Pyxel2D
   author: Jay Kumogata
   contact: https://x.com/jay_kumogata
@@ -700,6 +827,8 @@
 
 - id: 123
   title: Columsme
+  play: https://kitao.dev/pyxel/launcher/?play=qzk4078/columusume_public/main/columusume&packages=numpy&gamepad=enabled
+  mobile: true
   site: https://github.com/qzk4078/columusume_public
   author: QZK
   contact: https://x.com/qzakusega
@@ -707,6 +836,8 @@
 
 - id: 122
   title: pymunk_de_pinball
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/pdp.html
+  mobile: true
   site: https://sanbunno-ichi.github.io/pymunk_de_pinball/
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
@@ -714,6 +845,7 @@
 
 - id: 121
   title: Falling is learning
+  play: https://sqddy.itch.io/falling-is-learning
   site: https://sqddy.itch.io/falling-is-learning
   author: squiddy
   contact: https://github.com/squiddy
@@ -721,6 +853,8 @@
 
 - id: 120
   title: pyxelvania
+  play: https://kitao.dev/pyxel/launcher/?play=hulk89/pyxelvania/main/pyxelvania&gamepad=enabled
+  mobile: true
   site: https://github.com/hulk89/pyxelvania
   author: hulk89
   contact: https://github.com/Hulk89
@@ -728,6 +862,8 @@
 
 - id: 119
   title: Tower of Ashura
+  play: https://ashura.tsapps.net/boot.php
+  mobile: true
   site: https://ashura.tsapps.net/
   author: Goldics
   contact: https://x.com/tsapps_goldics
@@ -754,13 +890,14 @@
 
 - id: 115
   title: Second Best
-  site: https://aged99oow.github.io/second/
+  site: https://github.com/aged99oow/second
   author: aged99oow
   contact: https://x.com/aged99
   desc: "An abstract strategy game to block the opponent's best hand"
 
 - id: 114
   title: Pyxel Bobbles
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/pb.html
   site: https://github.com/sanbunno-ichi/pyxelpb
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
@@ -768,27 +905,34 @@
 
 - id: 113
   title: Seafish
-  site: https://s3bw.github.io/seafish
+  play: https://s3bw.github.io/seafish
+  mobile: true
+  site: https://github.com/s3bw/seafish
   author: s3bw
   contact: https://github.com/s3bw
   desc: A chess AI you can play against
 
 - id: 112
   title: Bubbles
-  site: https://helpcomputer.github.io/pyxel/bubbles/
+  play: https://kitao.dev/pyxel/launcher/?run=helpcomputer/bubbles/main/src/main&gamepad=enabled
+  mobile: true
+  site: https://github.com/helpcomputer/bubbles
   author: Adam
   contact: https://x.com/badcomputer0
   desc: An arcade action game
 
 - id: 111
   title: Sarananda
-  site: https://kadoyan.github.io/sarananda/sarananda.html
+  play: https://kitao.dev/pyxel/launcher/?play=kadoyan/sarananda/main/sarananda&gamepad=enabled
+  mobile: true
+  site: https://github.com/kadoyan/sarananda
   author: KADOYAN
   contact: https://x.com/kadoyan
   desc: An escape game set inside an unidentified star
 
 - id: 110
   title: Pyxel Block
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/bb.html
   site: https://github.com/sanbunno-ichi/pyxelblk
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
@@ -803,20 +947,25 @@
 
 - id: 108
   title: Ticoban
-  site: https://son-link.github.io/ticoban-pyxel/
+  play: https://kitao.dev/pyxel/launcher/?play=son-link/ticoban-pyxel/main/ticoban-pyxel&gamepad=enabled
+  mobile: true
+  site: https://github.com/son-link/ticoban-pyxel
   author: Son Link
   contact: https://x.com/sonlink
   desc: A Sokoban clone
 
 - id: 107
   title: Mini Zelda
-  site: https://aged99oow.github.io/zelda/
+  play: https://kitao.dev/pyxel/launcher/?play=aged99oow/zelda/main/MiniZelda&gamepad=enabled
+  mobile: true
+  site: https://github.com/aged99oow/zelda
   author: aged99oow
   contact: https://x.com/aged99
   desc: A reduced version of The Legend of Zelda (NES)
 
 - id: 106
   title: mandelzoom
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/mandelzoom.html
   site: https://github.com/sanbunno-ichi/fracanim#mandelzoom
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
@@ -824,13 +973,15 @@
 
 - id: 105
   title: Sougwachi
-  site: https://dee-okinawa.com/game/sougachi/
+  site: https://www.dee-okinawa.com/koneta/2024/01/sougach.html
   author: Yoshinori Honda
   contact: https://x.com/dee_okinawa
   desc: "A game about distributing New Year's gifts to visiting relatives"
 
 - id: 104
   title: Mahjong
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/pyxelmj.html
+  mobile: true
   site: https://github.com/sanbunno-ichi/pyxelmj
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
@@ -838,6 +989,7 @@
 
 - id: 103
   title: ACLM
+  play: https://kitao.dev/pyxel/launcher/?play=jay-kumogata/RetroGames/main/pyxel/aclm/aclm
   site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/aclm
   author: Jay Kumogata
   contact: https://x.com/jay_kumogata
@@ -845,6 +997,7 @@
 
 - id: 102
   title: Pinball
+  play: https://kitao.dev/pyxel/launcher/?play=jay-kumogata/RetroGames/main/pyxel/pinball/Pinball
   site: https://github.com/jay-kumogata/RetroGames/tree/main/pyxel/pinball
   author: Jay Kumogata
   contact: https://x.com/jay_kumogata
@@ -858,19 +1011,25 @@
 
 - id: 100
   title: Cellular Automata
-  site: https://juliangroen.github.io/cellular-automata/
+  play: https://kitao.dev/pyxel/launcher/?play=juliangroen/cellular-automata/main/cellular_automata&gamepad=enabled
+  mobile: true
+  site: https://github.com/juliangroen/cellular-automata
   author: Julian
   contact: https://github.com/juliangroen
   desc: "An implementation of Conway's Game of Life"
 
 - id: 99
   title: Hieroglyph_Editor
+  play: https://koidemizu.github.io/game/hieroglyph/hieroglyph.html
+  mobile: true
   site: https://koidemizu.github.io/post/hieroglyph/
   author: koidemizu
   desc: A small editor that converts Japanese into hieroglyphs
 
 - id: 98
   title: Pyxel Invaders
+  play: https://sanbunnoichi1962.web.fc2.com/pyxel/inv.html
+  mobile: true
   site: https://github.com/sanbunno-ichi/pyxelinv
   author: sanbunnoichi
   contact: mailto:sanbunnoichi1962@gmail.com
@@ -878,68 +1037,86 @@
 
 - id: 97
   title: Carma Junino
+  play: https://kitao.dev/pyxel/launcher/?play=FelipePM01/CarmaJunino/main/CarmaJunino&gamepad=enabled
   site: https://mrcolorhd.itch.io/carma-junino
   author: MrColorHD
   desc: A platformer about a popular Brazilian festival
 
 - id: 96
   title: Mini Typing
-  site: https://aged99oow.github.io/typing/
+  play: https://kitao.dev/pyxel/launcher/?play=aged99oow/typing/main/MiniTyping
+  site: https://github.com/aged99oow/typing
   author: aged99oow
   contact: https://x.com/aged99
   desc: A Japanese–English translation typing game
 
 - id: 95
   title: Poker
+  play: https://kitao.dev/pyxel/launcher/?play=Hiekichi/Poker/main/Poker&gamepad=enabled
+  mobile: true
   site: https://github.com/Hiekichi/Poker
   author: Hiekichi
   desc: A tabletop card game
 
 - id: 94
   title: Attacker
+  play: https://kitao.dev/pyxel/launcher/?play=Hiekichi/Attacker/main/Attacker&gamepad=enabled
+  mobile: true
   site: https://github.com/Hiekichi/Attacker
   author: Hiekichi
   desc: A retro shooting game
 
 - id: 93
   title: Stellar Blazer
+  play: https://kitao.dev/pyxel/launcher/?play=Hiekichi/StellarBlazer/main/StellarBlazer&gamepad=enabled
+  mobile: true
   site: https://github.com/Hiekichi/StellarBlazer
   author: Hiekichi
   desc: A shooting game
 
 - id: 92
   title: Vortexion
-  site: https://badcomputer0.itch.io/vortexion
+  play: https://kitao.dev/pyxel/launcher/?play=kitao/pyxel/main/python/pyxel/examples/apps/vortexion&gamepad=enabled
+  mobile: true
+  site: https://github.com/helpcomputer/vortexion
   author: Adam
   contact: https://x.com/badcomputer0
   desc: A shoot-em-up
 
 - id: 91
   title: ChottoCopter
+  play: https://kitao.dev/pyxel/launcher/?play=Hiekichi/ChottoCopter/main/ChottoCopter&gamepad=enabled
   site: https://github.com/Hiekichi/ChottoCopter
   author: Hiekichi
   desc: A hostage rescue game
 
 - id: 90
   title: CheaperDepth
+  play: https://kitao.dev/pyxel/launcher/?play=Hiekichi/CheeperDepth/main/CheaperDepth&gamepad=enabled
+  mobile: true
   site: https://github.com/Hiekichi/CheeperDepth
   author: Hiekichi
   desc: A depth charge game
 
 - id: 89
   title: Kanixian
+  play: https://kitao.dev/pyxel/launcher/?play=Hiekichi/Kanixian/main/Kanixian&gamepad=enabled
+  mobile: true
   site: https://github.com/Hiekichi/Kanixian
   author: Hiekichi
   desc: A shooting game
 
 - id: 88
   title: BakudanKun
+  play: https://kitao.dev/pyxel/launcher/?play=Hiekichi/BakudanKunPy/main/BakudanKun&gamepad=enabled
+  mobile: true
   site: https://github.com/Hiekichi/BakudanKunPy
   author: Hiekichi
   desc: A bomber game
 
 - id: 87
   title: LF3DP
+  play: https://kitao.dev/pyxel/launcher/?run=sichaozhang1112/LF3DP/main/lf3dp_vb2
   site: https://github.com/sichaozhang1112/LF3DP
   author: GANAH
   contact: https://github.com/sichaozhang1112/PEANUX
@@ -947,34 +1124,36 @@
 
 - id: 86
   title: MazeWalkGame
+  play: https://kitao.dev/pyxel/launcher/?play=Hiekichi/MazeWalkGame/main/MazeWalk&gamepad=enabled
+  mobile: true
   site: https://github.com/Hiekichi/MazeWalkGame
   author: Hiekichi
   desc: A dot-eating game
 
 - id: 85
   title: obakeHunt
-  site: https://sirococoa.github.io/obakeHunt/
+  site: https://github.com/sirococoa/obakeHunt
   author: sirococoa
   contact: https://x.com/sirococoa1
   desc: A shooting game with a finger gun
 
 - id: 84
   title: Ostle
-  site: https://aged99oow.github.io/ostle/
+  site: https://github.com/aged99oow/ostle
   author: aged99oow
   contact: https://x.com/aged99
   desc: An abstract strategy game on a 5x5 square grid
 
 - id: 83
   title: Dice Arithmetic
-  site: https://aged99oow.github.io/dice/
+  site: https://github.com/aged99oow/dice
   author: aged99oow
   contact: https://x.com/aged99
   desc: A game where you make the number closest to the target
 
 - id: 82
   title: Sangoku Historia
-  site: https://github.com/shiromofufactory/pyxel-sangokushi-guide
+  site: https://play.google.com/store/apps/details?id=com.shiromofufactory.sangokuhistoria
   author: frenchbread
   contact: https://x.com/frenchbread1222
   desc: A strategic simulation game set in the Three Kingdoms
@@ -988,6 +1167,7 @@
 
 - id: 80
   title: Scratch Lesson Port
+  play: https://edward.delaporte.us/examples/pyxel/doodlebug.html
   site: https://edward.delaporte.us/pyxel/doodlebug/
   author: EdTheDev
   contact: https://github.com/edthedev
@@ -1002,20 +1182,21 @@
 
 - id: 78
   title: Mini RPG
-  site: https://aged99oow.github.io/rpg/
+  site: https://github.com/aged99oow/rpg
   author: aged99oow
   contact: https://x.com/aged99
   desc: A no-save mini RPG
 
 - id: 77
   title: Mini Pittan
-  site: https://aged99oow.github.io/pittan/
+  site: https://github.com/aged99oow/pittan
   author: aged99oow
   contact: https://x.com/aged99
   desc: A Japanese word puzzle
 
 - id: 76
   title: Pyxel Road Demo
+  play: https://kitao.dev/pyxel/launcher/?run=ilya-ssh/PyxelRoadDemo/master/main
   site: https://github.com/ilya-ssh/PyxelRoadDemo
   author: Ilya
   contact: https://github.com/ilya-ssh
@@ -1030,14 +1211,14 @@
 
 - id: 74
   title: Panelund
-  site: https://aged99oow.github.io/panel/
+  site: https://github.com/aged99oow/panel
   author: aged99oow
   contact: https://x.com/aged99
   desc: A boss fight where you surround and charge the enemy boss
 
 - id: 73
   title: Othellomino
-  site: https://aged99oow.github.io/othello/
+  site: https://github.com/aged99oow/othello
   author: aged99oow
   contact: https://x.com/aged99
   desc: An Othello variant with polyominoes
@@ -1058,21 +1239,23 @@
 
 - id: 70
   title: Mini Mario
-  site: https://aged99oow.github.io/mario/
+  play: https://kitao.dev/pyxel/launcher/?play=aged99oow/mario/main/MiniMario&gamepad=enabled
+  mobile: true
+  site: https://github.com/aged99oow/mario
   author: aged99oow
   contact: https://x.com/aged99
   desc: A reduced version of Super Mario Bros. (NES)
 
 - id: 69
   title: Mini Mahjong
-  site: https://aged99oow.github.io/mahjong/
+  site: https://github.com/aged99oow/mahjong
   author: aged99oow
   contact: https://x.com/aged99
   desc: A Mahjong game with reduced tiles
 
 - id: 68
   title: Mini Shogi
-  site: https://aged99oow.github.io/shogi/
+  site: https://github.com/aged99oow/shogi
   author: aged99oow
   contact: https://x.com/aged99
   desc: A shogi game with reduced pieces on a 5x5 board
@@ -1085,6 +1268,8 @@
 
 - id: 66
   title: 8bit BGM generator
+  play: https://kitao.dev/pyxel/launcher/?play=shiromofufactory/8bit-bgm-generator/master/8bit-bgm-gen
+  mobile: true
   site: https://retro-bgm-generator.web.app/
   author: frenchbread
   contact: https://x.com/frenchbread1222
@@ -1092,7 +1277,8 @@
 
 - id: 65
   title: kektris
-  site: https://konstantinklepikov.github.io/kektris/
+  play: https://kitao.dev/pyxel/launcher/?play=konstantinklepikov/kektris/main/example/kektris
+  site: https://github.com/konstantinklepikov/kektris
   author: KonstantinKlepikov
   contact: https://github.com/KonstantinKlepikov
   desc: A four-quadrant Tetris game
@@ -1113,6 +1299,8 @@
 
 - id: 62
   title: Hopping Hiyoko
+  play: https://kitao.dev/pyxel/launcher/?play=rococomico/Pyxel_games/main/hopping_hiyoko/hopping_hiyoko&gamepad=enabled
+  mobile: true
   site: https://github.com/rococomico/Pyxel_games
   author: rococomico
   contact: https://x.com/rococomico
@@ -1134,6 +1322,8 @@
 
 - id: 59
   title: Emergency Button
+  play: https://emergency-button.com/play.html
+  mobile: true
   site: https://emergency-button.com/
   author: Tokoroteen
   contact: https://x.com/Tokoroteen__
@@ -1224,6 +1414,7 @@
 
 - id: 46
   title: GrowyGardens
+  play: https://superzooper3.github.io/GrowyGardens/
   site: https://github.com/SuperZooper3/GrowyGardens
   author: SuperZooper3
   contact: https://github.com/SuperZooper3
@@ -1245,7 +1436,6 @@
 
 - id: 43
   title: Mini-Solitaire
-  site: https://github.com/SteelWool32/mini-solitaire
   author: SteelWool32
   contact: https://github.com/SteelWool32
   desc: 'A "demake" of Klondike Solitaire'
@@ -1338,6 +1528,7 @@
 
 - id: 29
   title: Chip 8 Pyxelized
+  site: https://github.com/deckarep/pyxel-chip8
   author: Deckarep
   contact: https://x.com/deckarep
   desc: A CHIP-8 emulator
@@ -1380,7 +1571,9 @@
 
 - id: 22
   title: Bansoko
-  site: https://kfurtak1024.itch.io/bansoko
+  play: https://kitao.dev/pyxel/launcher/?run=kfurtak1024/bansoko/master/bansoko/__main__&packages=jsonschema&gamepad=enabled
+  mobile: true
+  site: https://github.com/kfurtak1024/bansoko
   author: Krzysztof Furtak
   contact: https://github.com/kfurtak1024
   desc: A space-themed Sokoban clone
@@ -1394,6 +1587,7 @@
 
 - id: 20
   title: Pyxel Raycast
+  play: https://kitao.dev/pyxel/launcher/?run=danmacnaughtan/pyxel-raycast/master/main
   site: https://github.com/danmacnaughtan/pyxel-raycast
   author: Dan MacNaughtan
   contact: https://github.com/danmacnaughtan
@@ -1422,6 +1616,7 @@
 
 - id: 16
   title: mini shooting
+  play: https://kitao.dev/pyxel/launcher/?play=5h00T/mini_shooting/master/app/mini_shooting&packages=numpy
   site: https://github.com/5h00T/mini_shooting
   author: shoot.er
   contact: https://x.com/m4_sd
@@ -1429,6 +1624,7 @@
 
 - id: 15
   title: Megaball
+  play: https://kitao.dev/pyxel/launcher/?play=kitao/pyxel/main/python/pyxel/examples/apps/megaball&gamepad=enabled
   site: https://helpcomputer.itch.io/megaball
   author: Adam
   contact: https://x.com/helpcomputer0
@@ -1497,6 +1693,7 @@
 
 - id: 5
   title: Diddi and the Bugs
+  play: https://kitao.dev/pyxel/launcher/?run=DiddiLeija/diddi-and-the-bugs/main/main
   site: https://diddileija.itch.io/diddi-and-the-bugs
   author: Diego Ramirez
   contact: https://github.com/DiddiLeija
@@ -1525,6 +1722,8 @@
 
 - id: 1
   title: 30 Seconds of Daylight
+  play: https://kitao.dev/pyxel/launcher/?play=kitao/30SecondsOfDaylight/main/30sec_of_daylight&gamepad=enabled
+  mobile: true
   site: https://github.com/kitao/30SecondsOfDaylight
   author: Adam
   contact: https://x.com/helpcomputer0

@@ -27,4 +27,8 @@ use `npx playwright install --with-deps webkit` to install system dependencies t
 - `npm run deploy:check`: run the checks and a deployment dry run without publishing.
 
 Edit `examples.yml` and the matching `images/<id>.gif` to update a project.
+Set `play` to a working browser game or its playable project page. Prefer a
+working Pyxel app package when available. Add `mobile: true` when players can
+use touch or the on-screen controls throughout the game. Set `site` to the
+most informative project page. It can share the play URL.
 The build replaces `dist/`; edit the sources, not the generated files.
